@@ -35,16 +35,32 @@ sql = """SELECT TOP (1000) *
 # GET DATA
 ######################################
 
-def getdata(sql):
-    connection = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
+connection = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
                             "Server=milsql02;"
                             "Database=ArtisanApplication;"
                             "Trusted_Connection=yes;")
-    df = pd.read_sql_query(sql, connection)
-    df.head()
+df = pd.read_sql_query(sql, connection)
+df.head()
 
-def main():
-    getdata(sql)
 
-if __name__ == "__main__":
-    main()
+esg = pd.read_csv(r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Sustainalytics ESG Details_04082020.csv', encoding='cp1252')
+esg.head(10)
+esg.describe()
+esg.dtypes
+
+
+
+
+#def getdata(sql):
+#    connection = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
+#                            "Server=milsql02;"
+#                            "Database=ArtisanApplication;"
+#                            "Trusted_Connection=yes;")
+#    df = pd.read_sql_query(sql, connection)
+#    df.head()
+#
+#def main():
+#    getdata(sql)
+#
+#if __name__ == "__main__":
+#    main()
