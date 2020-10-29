@@ -20,6 +20,7 @@ SELECT TOP (10000)
 	IssueCurrencyCode,
 	IndexName,
 	ArtisanId,
+	ISIN,
 	Ticker,
 	TickerAndExchange,
 	SecurityDescription,

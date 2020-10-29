@@ -1,0 +1,1422 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>|</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>True</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Artisan Universe Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Index" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="SecurityDescription" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="GICSSector" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="GICSIndustry" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="Date" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_netChg1d" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_pctChg1d" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_localPrice" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_localPriceOpen" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_localPriceClose" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_localHigh52week" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_localLow52week" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_currMktCap" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_currMktCapUSD" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_netDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_annualDividend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_dividendYield" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_volume" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_pbRatio" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_eps" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_vwap" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_bvps" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_roe" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_cash" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_ebit" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_ebitda" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_longTermDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_netIncome" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_totalAssets" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_totalDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_totalEquity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_totalLiabilities" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="BBG_totalFeeIncome" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_marketCap" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_annualDividend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_dividendYield" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_volume" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_pbRatio" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_eps" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_vwap" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_peFy1" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_bvps" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_roe" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_fiscalFreeCashFlowEstimate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_cash" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_ebit" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_ebitda" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_longTermDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_netIncome" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_operatingExpense" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_totalAssets" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_totalDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_totalEquity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_totalLiabilities" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_totalFeeIncome" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_betaSP500" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="FS_betaACWI" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="totalReturn3MonthLocal" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="totalReturn3YearLocal" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="rawX" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="rawY" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="rawZ" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="formula" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="162" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Random</Mode>
+          <N>5</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Random 1 in 5</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="354" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Ticker" order="Ascending" />
+            <Field field="Date" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Ticker - Ascending
+Date - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" type="Date" size="10" />
+            <SelectField field="BBG_netChg1d" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_pctChg1d" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_localPrice" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_localPriceOpen" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_localPriceClose" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_localHigh52week" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_localLow52week" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_currMktCap" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_currMktCapUSD" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_netDebt" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_annualDividend" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_dividendYield" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_volume" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_pbRatio" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_eps" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_vwap" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_bvps" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_roe" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_cash" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_ebit" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_ebitda" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_longTermDebt" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_netIncome" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_totalAssets" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_totalDebt" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_totalEquity" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_totalLiabilities" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_totalFeeIncome" selected="True" type="Float" size="4" />
+            <SelectField field="FS_marketCap" selected="True" type="Float" size="4" />
+            <SelectField field="FS_annualDividend" selected="True" type="Float" size="4" />
+            <SelectField field="FS_dividendYield" selected="True" type="Float" size="4" />
+            <SelectField field="FS_volume" selected="True" type="Int32" size="4" />
+            <SelectField field="FS_pbRatio" selected="True" type="Float" size="4" />
+            <SelectField field="FS_eps" selected="True" type="Float" size="4" />
+            <SelectField field="FS_vwap" selected="True" type="Int32" size="4" />
+            <SelectField field="FS_peFy1" selected="True" type="Float" size="4" />
+            <SelectField field="FS_bvps" selected="True" type="Float" size="4" />
+            <SelectField field="FS_roe" selected="True" type="Float" size="4" />
+            <SelectField field="FS_fiscalFreeCashFlowEstimate" selected="True" type="Float" size="4" />
+            <SelectField field="FS_cash" selected="True" type="Float" size="4" />
+            <SelectField field="FS_ebit" selected="True" type="Float" size="4" />
+            <SelectField field="FS_ebitda" selected="True" type="Float" size="4" />
+            <SelectField field="FS_longTermDebt" selected="True" type="Float" size="4" />
+            <SelectField field="FS_netIncome" selected="True" type="Float" size="4" />
+            <SelectField field="FS_operatingExpense" selected="True" type="Float" size="4" />
+            <SelectField field="FS_totalAssets" selected="True" type="Float" size="4" />
+            <SelectField field="FS_totalDebt" selected="True" type="Float" size="4" />
+            <SelectField field="FS_totalEquity" selected="True" type="Float" size="4" />
+            <SelectField field="FS_totalLiabilities" selected="True" type="Float" size="4" />
+            <SelectField field="FS_totalFeeIncome" selected="True" type="Float" size="4" />
+            <SelectField field="FS_betaSP500" selected="True" type="Float" size="4" />
+            <SelectField field="FS_betaACWI" selected="True" type="Float" size="4" />
+            <SelectField field="totalReturn3MonthLocal" selected="True" type="Float" size="4" />
+            <SelectField field="totalReturn3YearLocal" selected="True" type="Float" size="4" />
+            <SelectField field="rawX" selected="True" type="Float" size="4" />
+            <SelectField field="rawY" selected="True" type="Float" size="4" />
+            <SelectField field="rawZ" selected="True" type="Float" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1242" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IIF(IsNull([FS_volume]) OR [FS_volume]=0,&#xA;	[BBG_volume], [FS_volume]*1000)" field="Volume" size="4" type="Int32" />
+            <FormulaField expression="IIF(IsNull([FS_vwap]) OR [FS_vwap]=0,&#xA;	[BBG_vwap], [FS_vwap])" field="VolumeWeightedAveragePrice" size="4" type="Int32" />
+            <FormulaField expression="IIF(IsNull([FS_marketCap]) OR [FS_marketCap]=0,&#xA;	IIF(IsNull([BBG_currMktCapUSD]),&#xA;	[BBG_currMktCap],&#xA;	[BBG_currMktCapUSD])&#xA;,[FS_marketCap])" field="MarketCap" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_annualDividend]),[BBG_annualDividend],[FS_annualDividend])" field="AnnualDividend" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_totalAssets]),[BBG_totalAssets],[FS_totalAssets])" field="Assets" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_totalDebt]),[BBG_totalDebt],[FS_totalDebt])" field="Debt" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_totalEquity]),[BBG_totalEquity],[FS_totalEquity])" field="Equity" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_totalLiabilities]),[BBG_totalLiabilities],[FS_totalLiabilities])" field="Liabilities" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_totalFeeIncome]),[BBG_totalFeeIncome],[FS_totalFeeIncome])" field="FeeIncome" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_netIncome]),[BBG_netIncome],[FS_netIncome])" field="NetIncome" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_cash]),[BBG_cash],[FS_cash])" field="Cash" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_longTermDebt]),[BBG_longTermDebt],[FS_longTermDebt])" field="LongTermDebt" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_ebit]),[BBG_ebit],[FS_ebit])" field="EarningsBeforeInterestTaxes" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_ebitda]),[BBG_ebitda],[FS_ebitda])" field="EarningsBeforeInterestTaxesDepreciationAmortization" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_eps]),[BBG_eps],[FS_eps])" field="EarningsPerShare" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_bvps]),[BBG_bvps],[FS_bvps])" field="BookValuePerShare" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_pbRatio]),[BBG_pbRatio],[FS_pbRatio])" field="PriceToBookRatio" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_roe]),[BBG_roe],[FS_roe])" field="ReturnOnEquity" size="4" type="Float" />
+            <FormulaField expression="DateTimeTrim([Date],'month')" field="DateMonth" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Replace Null FactSet Values with Bloomberg Values</AnnotationText>
+          <DefaultAnnotationText>Volume = IIF(IsNull([FS_volume]) OR [FS_volume]=0,
+	[BBG_volume], [FS_volume]*10...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1986" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Index" selected="True" rename="INDEX" />
+            <SelectField field="Ticker" selected="True" rename="TICKER" />
+            <SelectField field="SecurityDescription" selected="True" rename="SEC_DESC" />
+            <SelectField field="GICSSector" selected="True" rename="SECTOR" />
+            <SelectField field="GICSIndustry" selected="True" rename="INDUSTRY" />
+            <SelectField field="Date" selected="True" rename="DATE" />
+            <SelectField field="BBG_netChg1d" selected="False" />
+            <SelectField field="BBG_pctChg1d" selected="False" />
+            <SelectField field="BBG_localPrice" selected="False" />
+            <SelectField field="BBG_localPriceOpen" selected="False" />
+            <SelectField field="BBG_localPriceClose" selected="False" />
+            <SelectField field="BBG_localHigh52week" selected="False" />
+            <SelectField field="BBG_localLow52week" selected="False" />
+            <SelectField field="BBG_currMktCap" selected="False" />
+            <SelectField field="BBG_currMktCapUSD" selected="False" />
+            <SelectField field="BBG_annualDividend" selected="False" />
+            <SelectField field="BBG_dividendYield" selected="False" />
+            <SelectField field="BBG_volume" selected="False" />
+            <SelectField field="BBG_pbRatio" selected="False" />
+            <SelectField field="BBG_eps" selected="False" />
+            <SelectField field="BBG_vwap" selected="False" />
+            <SelectField field="BBG_bvps" selected="False" />
+            <SelectField field="BBG_roe" selected="False" />
+            <SelectField field="BBG_cash" selected="False" />
+            <SelectField field="BBG_ebit" selected="False" />
+            <SelectField field="BBG_ebitda" selected="False" />
+            <SelectField field="BBG_longTermDebt" selected="False" />
+            <SelectField field="BBG_netIncome" selected="False" />
+            <SelectField field="BBG_totalAssets" selected="False" />
+            <SelectField field="BBG_totalDebt" selected="False" />
+            <SelectField field="BBG_totalEquity" selected="False" />
+            <SelectField field="BBG_totalLiabilities" selected="False" />
+            <SelectField field="BBG_totalFeeIncome" selected="False" />
+            <SelectField field="FS_marketCap" selected="False" />
+            <SelectField field="FS_annualDividend" selected="False" />
+            <SelectField field="FS_dividendYield" selected="False" />
+            <SelectField field="FS_volume" selected="False" />
+            <SelectField field="FS_pbRatio" selected="False" />
+            <SelectField field="FS_eps" selected="False" />
+            <SelectField field="FS_vwap" selected="False" />
+            <SelectField field="FS_bvps" selected="False" />
+            <SelectField field="FS_roe" selected="False" />
+            <SelectField field="FS_cash" selected="False" />
+            <SelectField field="FS_ebit" selected="False" />
+            <SelectField field="FS_ebitda" selected="False" />
+            <SelectField field="FS_longTermDebt" selected="False" />
+            <SelectField field="FS_netIncome" selected="False" />
+            <SelectField field="FS_totalAssets" selected="False" />
+            <SelectField field="FS_totalDebt" selected="False" />
+            <SelectField field="FS_totalEquity" selected="False" />
+            <SelectField field="FS_totalLiabilities" selected="False" />
+            <SelectField field="FS_totalFeeIncome" selected="False" />
+            <SelectField field="FS_betaSP500" selected="False" />
+            <SelectField field="FS_betaACWI" selected="True" />
+            <SelectField field="totalReturn3MonthLocal" selected="True" />
+            <SelectField field="totalReturn3YearLocal" selected="True" />
+            <SelectField field="rawX" selected="True" />
+            <SelectField field="rawY" selected="True" />
+            <SelectField field="rawZ" selected="True" />
+            <SelectField field="formula" selected="True" />
+            <SelectField field="OpenPrice" selected="True" rename="PRICE_OPEN" />
+            <SelectField field="OpenPriceMovingAverage" selected="False" />
+            <SelectField field="ClosePrice" selected="True" rename="PRICE_CLOSE" />
+            <SelectField field="ClosePriceMovingAverage" selected="False" />
+            <SelectField field="PriceChange" selected="True" rename="NET_CHG_1D" />
+            <SelectField field="PriceChange%" selected="True" rename="PCT_CHG_1D" />
+            <SelectField field="Volume" selected="True" rename="VOLUME" />
+            <SelectField field="VolumeWeightedAveragePrice" selected="True" rename="VWAP" />
+            <SelectField field="MarketCap" selected="True" rename="MARKET_CAP" />
+            <SelectField field="AnnualDividend" selected="True" rename="ANNUAL_DIV" />
+            <SelectField field="Assets" selected="True" rename="ASSETS" />
+            <SelectField field="Debt" selected="True" rename="DEBT" />
+            <SelectField field="Equity" selected="True" rename="EQUITY" />
+            <SelectField field="Liabilities" selected="True" rename="LIABILITIES" />
+            <SelectField field="FS_operatingExpense" selected="True" rename="OPEX" />
+            <SelectField field="FeeIncome" selected="True" rename="FEE_INCOME" />
+            <SelectField field="NetIncome" selected="True" rename="NET_INCOME" />
+            <SelectField field="Cash" selected="True" rename="CASH" />
+            <SelectField field="BBG_netDebt" selected="True" rename="NET_DEBT" />
+            <SelectField field="LongTermDebt" selected="True" rename="LTD" />
+            <SelectField field="FS_fiscalFreeCashFlowEstimate" selected="True" rename="FCF" />
+            <SelectField field="EarningsBeforeInterestTaxes" selected="True" rename="EBIT" />
+            <SelectField field="EarningsBeforeInterestTaxesDepreciationAmortization" selected="True" rename="EBITDA" />
+            <SelectField field="EarningsPerShare" selected="True" rename="EPS" />
+            <SelectField field="FS_peFy1" selected="True" rename="PE_FY1" />
+            <SelectField field="BookValuePerShare" selected="True" rename="BVPS" />
+            <SelectField field="PriceToBookRatio" selected="True" rename="PBR" />
+            <SelectField field="ReturnOnEquity" selected="True" rename="ROE" />
+            <SelectField field="E_1_1_Environmental_Policy" selected="True" />
+            <SelectField field="E_1_10_Carbon_Intensity_Trend" selected="True" />
+            <SelectField field="E_1_11_Renewable_Energy_Use" selected="True" />
+            <SelectField field="E_1_2_Environmental_Management_System" selected="True" />
+            <SelectField field="E_1_2_1_Biodiversity_Programmes" selected="True" />
+            <SelectField field="E_1_2_2_Site_Closure___Rehabilitation" selected="True" />
+            <SelectField field="E_1_2_4_Oil_Spill_Disclosure___Performance" selected="True" />
+            <SelectField field="E_1_2_5_Cyanide_Management" selected="True" />
+            <SelectField field="E_1_2_6_1_Solid_Waste_Management" selected="True" />
+            <SelectField field="E_1_2_6_2_Mineral_Waste_Management" selected="True" />
+            <SelectField field="E_1_2_6_3_Effluent_Management" selected="True" />
+            <SelectField field="E_1_2_6_4_Offshore_Well_Management" selected="True" />
+            <SelectField field="E_1_2_6_5_Radioactive_Waste_Management" selected="True" />
+            <SelectField field="E_1_2_7_Water_Intensity" selected="True" />
+            <SelectField field="E_1_2_7_1_Water_Risk_Management" selected="True" />
+            <SelectField field="E_1_2_7_2_Water_Intensity_Trend" selected="True" />
+            <SelectField field="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" selected="True" />
+            <SelectField field="E_1_2_8_Forest_Certifications" selected="True" />
+            <SelectField field="E_1_2_9_Deforestation_Policy" selected="True" />
+            <SelectField field="E_1_2_10_Deforestation_Programme" selected="True" />
+            <SelectField field="E_1_3_EMS_Certification" selected="True" />
+            <SelectField field="E_1_3_1_Emergency_Response_Programme" selected="True" />
+            <SelectField field="E_1_3_2_Hazardous_Waste_Management" selected="True" />
+            <SelectField field="E_1_3_3_Non_GHG_Air_Emissions_Programmes" selected="True" />
+            <SelectField field="E_1_3_4_Water_Management_Programmes" selected="True" />
+            <SelectField field="E_1_3_6_Tailings_Management_and_Standards" selected="True" />
+            <SelectField field="E_1_6_Scope_of_GHG_Reporting" selected="True" />
+            <SelectField field="E_1_6_1_GHG_Risk_Management" selected="True" />
+            <SelectField field="E_1_6_2_Physical_Climate_Risk_Management" selected="True" />
+            <SelectField field="E_1_7_0_GHG_Reduction_Programme" selected="True" />
+            <SelectField field="E_1_7_1_Green_Logistics_Programmes" selected="True" />
+            <SelectField field="E_1_8_Renewable_Energy_Programmes" selected="True" />
+            <SelectField field="E_1_9_Carbon_Intensity" selected="True" />
+            <SelectField field="E_2_1_Green_Procurement_Policy" selected="True" />
+            <SelectField field="E_2_1_1_Supplier_Environmental_Programmes" selected="True" />
+            <SelectField field="E_2_1_2_Supplier_Environmental_Certifications" selected="True" />
+            <SelectField field="E_2_1_3_Sustainable_Agriculture_Programmes" selected="True" />
+            <SelectField field="E_2_1_5_Food___Beverage_Sustainability_Initiatives" selected="True" />
+            <SelectField field="E_2_1_6_Green_Outsourced_Logistics_Programmes" selected="True" />
+            <SelectField field="E_2_1_7_Recycled_Material_Use" selected="True" />
+            <SelectField field="E_2_1_8_FSC_Certified_Sourcing" selected="True" />
+            <SelectField field="E_2_1_9_Sustainable_Food_Programmes" selected="True" />
+            <SelectField field="E_2_1_11_Shipbreaking_Programme" selected="True" />
+            <SelectField field="E_3_1_1_Sustainable_Products___Services" selected="True" />
+            <SelectField field="E_3_1_3_Fleet_Emissions" selected="True" />
+            <SelectField field="E_3_1_4_Fleet_Emissions_Trend" selected="True" />
+            <SelectField field="E_3_1_5_Sustainable_Mobility_Products" selected="True" />
+            <SelectField field="E_3_1_6_Eco_Design" selected="True" />
+            <SelectField field="E_3_1_7_Product_Stewardship_Programmes" selected="True" />
+            <SelectField field="E_3_1_8_Organic_Products" selected="True" />
+            <SelectField field="E_3_1_9_GMO_Policy" selected="True" />
+            <SelectField field="E_3_1_10_Credit___Loan_Standards" selected="True" />
+            <SelectField field="E_3_1_11_Responsible_Asset_Management" selected="True" />
+            <SelectField field="E_3_1_12_Real_Estate_LCA" selected="True" />
+            <SelectField field="E_3_1_13_Green_Buildings_Investments" selected="True" />
+            <SelectField field="E_3_1_14_Share_of_Green_Buildings" selected="True" />
+            <SelectField field="E_3_1_15_Sustainable_Financial_Initiatives" selected="True" />
+            <SelectField field="E_3_1_16_Hazardous_Products" selected="True" />
+            <SelectField field="E_3_1_17_Carbon_Intensity_of_Generation" selected="True" />
+            <SelectField field="E_3_1_18_Transmission_Loss_Rate" selected="True" />
+            <SelectField field="E_3_1_19_Hazardous_Substances_Management" selected="True" />
+            <SelectField field="E_3_1_20_Fleet_Age" selected="True" />
+            <SelectField field="E_3_1_21_Carbon_Intensity_Trend_of_Generation" selected="True" />
+            <SelectField field="G_1_1_Bribery___Corruption_Policy" selected="True" />
+            <SelectField field="G_1_1_1_Bribery___Corruption_Programmes" selected="True" />
+            <SelectField field="G_1_2_Whistleblower_Programmes" selected="True" />
+            <SelectField field="G_1_2_1_Business_Ethics_Programme" selected="True" />
+            <SelectField field="G_1_3_Global_Compact_Signatory" selected="True" />
+            <SelectField field="G_1_3_1_PRI_Signatory" selected="True" />
+            <SelectField field="G_1_3_2_Responsible_Investment_Policy" selected="True" />
+            <SelectField field="G_1_3_3_UNEPFI_Signatory" selected="True" />
+            <SelectField field="G_1_3_4_Green_Building_Memberships" selected="True" />
+            <SelectField field="G_1_3_5_Equator_Principles_Signatory" selected="True" />
+            <SelectField field="G_1_3_6_Responsible_Investment_Programme" selected="True" />
+            <SelectField field="G_1_3_7_Corporate_Finance___ESG_Integration" selected="True" />
+            <SelectField field="G_1_3_8_Responsible_Product_Offering" selected="True" />
+            <SelectField field="G_1_3_9_Underwriting_Standards" selected="True" />
+            <SelectField field="G_1_4_1_Money_Laundering_Policy" selected="True" />
+            <SelectField field="G_1_4_2_Compliance_Programme" selected="True" />
+            <SelectField field="G_1_4_3_Animal_Testing_Policy" selected="True" />
+            <SelectField field="G_1_4_3_1_Animal_Testing_Programme" selected="True" />
+            <SelectField field="G_1_4_4_Animal_Welfare_Policy" selected="True" />
+            <SelectField field="G_1_4_4_1_Animal_Welfare_Programme" selected="True" />
+            <SelectField field="G_1_4_5_Policy_on_Emerging_Technologies" selected="True" />
+            <SelectField field="G_1_4_6_Clinical_Trial_Standards" selected="True" />
+            <SelectField field="G_1_4_7_Clinical_Trial_Programme" selected="True" />
+            <SelectField field="G_2_1_ESG_Reporting_Standards" selected="True" />
+            <SelectField field="G_2_2_Verification_of_ESG_Reporting" selected="True" />
+            <SelectField field="G_2_5_ESG_Governance" selected="True" />
+            <SelectField field="G_3_1_Political_Involvement_Policy" selected="True" />
+            <SelectField field="G_3_2_Lobbying_and_Political_Expenses" selected="True" />
+            <SelectField field="G_3_3_1_Transparency_on_Government_Payments" selected="True" />
+            <SelectField field="S_1_1_Freedom_of_Association_Policy" selected="True" />
+            <SelectField field="S_1_1_1_Working_Hours_Policy" selected="True" />
+            <SelectField field="S_1_2_Discrimination_Policy" selected="True" />
+            <SelectField field="S_1_3_Diversity_Programmes" selected="True" />
+            <SelectField field="S_1_3_1_Gender_Pay_Equality_Programme" selected="True" />
+            <SelectField field="S_1_3_2_Gender_Pay_Disclosure" selected="True" />
+            <SelectField field="S_1_4_Collective_Bargaining_Agreements" selected="True" />
+            <SelectField field="S_1_5_Employee_Turnover_Rate" selected="True" />
+            <SelectField field="S_1_5_1_Percentage_of_Temporary_Workers" selected="True" />
+            <SelectField field="S_1_5_2_Human_Capital_Development" selected="True" />
+            <SelectField field="S_1_6_1_Employee_Training" selected="True" />
+            <SelectField field="S_1_6_2_1_Health_and_Safety_Management_System" selected="True" />
+            <SelectField field="S_1_6_3_HIV_Aids_Programmes" selected="True" />
+            <SelectField field="S_1_6_4_Health___Safety_Certifications" selected="True" />
+            <SelectField field="S_1_6_5_LTIR_Trend" selected="True" />
+            <SelectField field="S_1_6_6_Employee_Fatality_Rate" selected="True" />
+            <SelectField field="S_2_1_Scope_of_Social_Supplier_Standards" selected="True" />
+            <SelectField field="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" selected="True" />
+            <SelectField field="S_2_1_3_Conflict_Minerals_Policy" selected="True" />
+            <SelectField field="S_2_1_3_1_Conflict_Minerals_Programmes" selected="True" />
+            <SelectField field="S_2_2_2_1_Supply_Chain_Management" selected="True" />
+            <SelectField field="S_2_2_3_Social_Supplier_Certification" selected="True" />
+            <SelectField field="S_2_2_4_Fair_Trade_Products" selected="True" />
+            <SelectField field="S_2_2_5_Contractor_Safety_Programme" selected="True" />
+            <SelectField field="S_2_2_6_Contractor_Fatalities" selected="True" />
+            <SelectField field="S_3_1_1_Responsible_Marketing_Policy" selected="True" />
+            <SelectField field="S_3_1_2_Advertising_Ethics_Policy" selected="True" />
+            <SelectField field="S_3_1_3_Data_Privacy___Security_Policy" selected="True" />
+            <SelectField field="S_3_1_3_1_Data_Privacy_Programme" selected="True" />
+            <SelectField field="S_3_1_3_2_Data_Request_Management" selected="True" />
+            <SelectField field="S_3_1_3_3_Cybersecurity_Programme" selected="True" />
+            <SelectField field="S_3_1_4_Electromagnetic_Safety_Programmes" selected="True" />
+            <SelectField field="S_3_1_6_Editorial_Guidelines" selected="True" />
+            <SelectField field="S_3_1_6_1_Media_Ethics_Programme" selected="True" />
+            <SelectField field="S_3_1_8_Service_Delays" selected="True" />
+            <SelectField field="S_3_1_9_Product_Health_Statement" selected="True" />
+            <SelectField field="S_3_1_9_1_Product_and_Service_Safety_Programme" selected="True" />
+            <SelectField field="S_3_1_10_Occupier_Satisfaction_Surveys" selected="True" />
+            <SelectField field="S_3_1_11_Customer_Eco_Efficiency_Programmes" selected="True" />
+            <SelectField field="S_3_1_12_Drug_Promotion_Standards" selected="True" />
+            <SelectField field="S_3_1_13_Ethical_Marketing_Promotion" selected="True" />
+            <SelectField field="S_3_1_14_Responsible_Gaming_Programme" selected="True" />
+            <SelectField field="S_3_1_15_Value_Based_Health_Care_Programme" selected="True" />
+            <SelectField field="S_3_1_16_Nutrition_and_Health_Programme" selected="True" />
+            <SelectField field="S_3_1_17_Asset_Integrity_Management" selected="True" />
+            <SelectField field="S_3_2_1_QMS_Certifications" selected="True" />
+            <SelectField field="S_3_2_2_Trial_Data_Transparency" selected="True" />
+            <SelectField field="S_3_2_3_U_S__Drug_Price_Transparency" selected="True" />
+            <SelectField field="S_4_2_1_Human_Rights_Policy" selected="True" />
+            <SelectField field="S_4_2_1_2_Human_Rights_Programme" selected="True" />
+            <SelectField field="S_4_2_2_Community_Involvement_Programmes" selected="True" />
+            <SelectField field="S_4_2_3_Financial_Inclusion" selected="True" />
+            <SelectField field="S_4_2_4_Access_to_Medicine_Programme" selected="True" />
+            <SelectField field="S_4_2_5_Neglected_Diseases_R_D" selected="True" />
+            <SelectField field="S_4_2_6_Equitable_Pricing_and_Availability" selected="True" />
+            <SelectField field="S_4_2_6_1_Intellectual_Property_Access" selected="True" />
+            <SelectField field="S_4_2_7_Access_to_Health_Care" selected="True" />
+            <SelectField field="S_4_2_9_Indigenous_Rights_Policy" selected="True" />
+            <SelectField field="S_4_2_10_Access_to_Basic_Services" selected="True" />
+            <SelectField field="S_4_2_11_Community_Development_Programmes" selected="True" />
+            <SelectField field="S_4_2_15_Noise_Management" selected="True" />
+            <SelectField field="S_4_4_1_Systemic_Risk_Management" selected="True" />
+            <SelectField field="S_4_4_2_Systemic_Risk_Reporting" selected="True" />
+            <SelectField field="S_4_4_3_Tier_1_Capital_Buffer" selected="True" />
+            <SelectField field="S_4_4_5_Leverage_Ratio" selected="True" />
+            <SelectField field="S_4_4_8_Asset_Quality" selected="True" />
+            <SelectField field="DFF" selected="True" rename="INT_RATE" />
+            <SelectField field="DEXUSEU" selected="True" rename="EX_RATE" />
+            <SelectField field="Mkt-RF" selected="False" />
+            <SelectField field="SMB" selected="False" />
+            <SelectField field="HML" selected="False" />
+            <SelectField field="RF" selected="False" />
+            <SelectField field="Mom" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1362" y="242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>MarketCap</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IIF(ISNULL([MarketCap]),[Row+1:MarketCap],[MarketCap])</Expression>
+          <GroupByFields>
+            <Field field="Ticker" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>MarketCap</AnnotationText>
+          <DefaultAnnotationText>IIF(ISNULL([MarketCap]),[Row+1:MarketCap],[MarketCap])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="1194" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>65001</CodePage>
+            <Delimeter>|</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sustainalytics Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_1_Environmental_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_10_Carbon_Intensity_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_11_Renewable_Energy_Use" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_Environmental_Management_System" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_1_Biodiversity_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_2_Site_Closure___Rehabilitation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_4_Oil_Spill_Disclosure___Performance" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_5_Cyanide_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_6_1_Solid_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_6_2_Mineral_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_6_3_Effluent_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_6_4_Offshore_Well_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_6_5_Radioactive_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_7_Water_Intensity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_7_1_Water_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_7_2_Water_Intensity_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_8_Forest_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_9_Deforestation_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_2_10_Deforestation_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_EMS_Certification" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_1_Emergency_Response_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_2_Hazardous_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_3_Non_GHG_Air_Emissions_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_4_Water_Management_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_3_6_Tailings_Management_and_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_6_Scope_of_GHG_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_6_1_GHG_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_6_2_Physical_Climate_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_7_0_GHG_Reduction_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_7_1_Green_Logistics_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_8_Renewable_Energy_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_1_9_Carbon_Intensity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_Green_Procurement_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_1_Supplier_Environmental_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_2_Supplier_Environmental_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_3_Sustainable_Agriculture_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_5_Food___Beverage_Sustainability_Initiatives" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_6_Green_Outsourced_Logistics_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_7_Recycled_Material_Use" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_8_FSC_Certified_Sourcing" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_9_Sustainable_Food_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_2_1_11_Shipbreaking_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_1_Sustainable_Products___Services" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_3_Fleet_Emissions" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_4_Fleet_Emissions_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_5_Sustainable_Mobility_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_6_Eco_Design" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_7_Product_Stewardship_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_8_Organic_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_9_GMO_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_10_Credit___Loan_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_11_Responsible_Asset_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_12_Real_Estate_LCA" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_13_Green_Buildings_Investments" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_14_Share_of_Green_Buildings" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_15_Sustainable_Financial_Initiatives" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_16_Hazardous_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_17_Carbon_Intensity_of_Generation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_18_Transmission_Loss_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_19_Hazardous_Substances_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_20_Fleet_Age" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="E_3_1_21_Carbon_Intensity_Trend_of_Generation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_1_Bribery___Corruption_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_1_1_Bribery___Corruption_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_2_Whistleblower_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_2_1_Business_Ethics_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_Global_Compact_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_1_PRI_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_2_Responsible_Investment_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_3_UNEPFI_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_4_Green_Building_Memberships" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_5_Equator_Principles_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_6_Responsible_Investment_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_7_Corporate_Finance___ESG_Integration" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_8_Responsible_Product_Offering" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_3_9_Underwriting_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_1_Money_Laundering_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_2_Compliance_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_3_Animal_Testing_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_3_1_Animal_Testing_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_4_Animal_Welfare_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_4_1_Animal_Welfare_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_5_Policy_on_Emerging_Technologies" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_6_Clinical_Trial_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_1_4_7_Clinical_Trial_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_2_1_ESG_Reporting_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_2_2_Verification_of_ESG_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_2_5_ESG_Governance" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_3_1_Political_Involvement_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_3_2_Lobbying_and_Political_Expenses" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="G_3_3_1_Transparency_on_Government_Payments" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_1_Freedom_of_Association_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_1_1_Working_Hours_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_2_Discrimination_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_3_Diversity_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_3_1_Gender_Pay_Equality_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_3_2_Gender_Pay_Disclosure" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_4_Collective_Bargaining_Agreements" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_5_Employee_Turnover_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_5_1_Percentage_of_Temporary_Workers" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_5_2_Human_Capital_Development" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_1_Employee_Training" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_2_1_Health_and_Safety_Management_System" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_3_HIV_Aids_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_4_Health___Safety_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_5_LTIR_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_1_6_6_Employee_Fatality_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_1_Scope_of_Social_Supplier_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_1_3_Conflict_Minerals_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_1_3_1_Conflict_Minerals_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_2_2_1_Supply_Chain_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_2_3_Social_Supplier_Certification" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_2_4_Fair_Trade_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_2_5_Contractor_Safety_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_2_2_6_Contractor_Fatalities" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_1_Responsible_Marketing_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_2_Advertising_Ethics_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_3_Data_Privacy___Security_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_3_1_Data_Privacy_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_3_2_Data_Request_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_3_3_Cybersecurity_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_4_Electromagnetic_Safety_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_6_Editorial_Guidelines" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_6_1_Media_Ethics_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_8_Service_Delays" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_9_Product_Health_Statement" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_9_1_Product_and_Service_Safety_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_10_Occupier_Satisfaction_Surveys" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_11_Customer_Eco_Efficiency_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_12_Drug_Promotion_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_13_Ethical_Marketing_Promotion" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_14_Responsible_Gaming_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_15_Value_Based_Health_Care_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_16_Nutrition_and_Health_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_1_17_Asset_Integrity_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_2_1_QMS_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_2_2_Trial_Data_Transparency" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_3_2_3_U_S__Drug_Price_Transparency" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_1_Human_Rights_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_1_2_Human_Rights_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_2_Community_Involvement_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_3_Financial_Inclusion" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_4_Access_to_Medicine_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_5_Neglected_Diseases_R_D" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_6_Equitable_Pricing_and_Availability" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_6_1_Intellectual_Property_Access" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_7_Access_to_Health_Care" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_9_Indigenous_Rights_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_10_Access_to_Basic_Services" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_11_Community_Development_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_2_15_Noise_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_4_1_Systemic_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_4_2_Systemic_Risk_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_4_3_Tier_1_Capital_Buffer" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_4_5_Leverage_Ratio" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+            <Field name="S_4_4_8_Asset_Quality" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Sustainalytics Data.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="1542" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Market Indicators 20201024.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DATE" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="DFF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="DEXUSEU" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="Mkt-RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="SMB" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="HML" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="Mom" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1554" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Ticker" />
+            <Field field="DateMonth" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Ticker" />
+            <Field field="DateMonth" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_DateMonth" selected="False" input="Left_" />
+                <SelectField field="Right_Date" selected="False" rename="Right_Date" input="Right_" />
+                <SelectField field="Right_Ticker" selected="False" rename="Right_Ticker" input="Right_" />
+                <SelectField field="Right_DateTime_Out" selected="False" input="Right_" />
+                <SelectField field="Right_DateMonth" selected="False" rename="Right_DateMonth" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1278" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Date</InputFieldName>
+          <Format>yyyy/MM/dd</Format>
+          <OutputFieldName>DateTime_Out</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Date From:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1650" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1398" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeAdd(&#xA;DateTimeTrim([DateTime_Out],'month')&#xA;,-1,'month')" field="DateMonth" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[DateMonth = DateTimeAdd(
+DateTimeTrim([DateTime_Out],'month')
+,-1,'month')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1746" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Date" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="DateTime_Out" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_DateMonth" selected="False" input="Left_" />
+                <SelectField field="Right_DATE" selected="False" rename="Right_DATE" input="Right_" />
+                <SelectField field="Right_DateTime_Out" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1650" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>DATE</InputFieldName>
+          <Format>yyyy-MM-dd</Format>
+          <OutputFieldName>DateTime_Out</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert DATE From:
+yyyy-MM-dd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1842" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="1662" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Prices_*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Open" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="High" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Low" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Adj Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Volume" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1578" y="54" width="164.2804" height="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Profile Null Values</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+            <Position x="1626" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Limit_UniqueCount>10000</Limit_UniqueCount>
+              <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+              <IsMetric value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1722" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Name] = "Nulls"</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Name</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-10-11 17:00:23</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Nulls</Operand>
+                  <StartDate>2020-10-11 17:00:23</StartDate>
+                  <EndDate>2020-10-11 17:00:23</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Name] = "Nulls"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="473" y="197.9999" width="753" height="173.0001" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Price</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="498" y="241.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>OpenPrice</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>IIF(ISNULL([BBG_localPriceOpen]),
+[Row+1:BBG_localPriceClose],
+[BBG_localPriceOpen])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Handle Null Open Prices</AnnotationText>
+              <DefaultAnnotationText>IIF(ISNULL([BBG_localPriceOpen]),
+[Row+1:BBG_localPriceClose]...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="606" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>OpenPriceMovingAverage</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="5" />
+              <Expression>AVERAGE([Row+5:BBG_localPriceOpen],[Row+4:BBG_localPriceOpen],
+[Row+3:BBG_localPriceOpen],[Row+2:BBG_localPriceOpen],
+[Row+1:BBG_localPriceOpen])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Open Price 5-day Moving Average</AnnotationText>
+              <DefaultAnnotationText>AVERAGE([Row+5:BBG_localPriceOpen],[Row+4:BBG_localPriceOpen]...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="714" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>ClosePrice</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>IIF(ISNULL([BBG_localPriceClose]),
+[Row-1:BBG_localPriceOpen],
+[BBG_localPriceClose])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Handle Null Close Price</AnnotationText>
+              <DefaultAnnotationText>IIF(ISNULL([BBG_localPriceClose]),
+[Row-1:BBG_localPriceOpen]...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="822" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>ClosePriceMovingAverage</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="5" />
+              <Expression>AVERAGE([Row+5:BBG_localPriceClose],[Row+4:BBG_localPriceClose],
+[Row+3:BBG_localPriceClose],[Row+2:BBG_localPriceClose],
+[Row+1:BBG_localPriceClose])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Close Price 5-day Moving Average</AnnotationText>
+              <DefaultAnnotationText>AVERAGE([Row+5:BBG_localPriceClose],[Row+4:BBG_localPriceClos...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="930" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF(IsNull([OpenPrice]),[OpenPriceMovingAverage],[OpenPrice])" field="OpenPrice" size="4" type="Float" />
+                <FormulaField expression="IIF(IsNull([ClosePrice]),[ClosePriceMovingAverage],[ClosePrice])" field="ClosePrice" size="4" type="Float" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Replace Null Prices with Moving Average</AnnotationText>
+              <DefaultAnnotationText>OpenPrice = IIF(IsNull([OpenPrice]),[OpenPriceMovingAverage],[OpenPrice])
+CloseP...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1038" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>PriceChange</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[ClosePrice]-[Row+1:ClosePrice]</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>PriceChange</AnnotationText>
+              <DefaultAnnotationText>[ClosePrice]-[Row+1:ClosePrice]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1122" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Index</UpdateField_Name>
+              <CreateField_Name>PriceChange%</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[PriceChange]/[Row+1:ClosePrice]</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>PriceChange%</AnnotationText>
+              <DefaultAnnotationText>[PriceChange]/[Row+1:ClosePrice]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="25" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="25" Connection="Left" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="30" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="30" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="30" Connection="Join" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="30" Connection="Left" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="2" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Data Preparation</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

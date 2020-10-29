@@ -1,0 +1,999 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=""|||SELECT
+	EDMSecurityId,
+	IssueCurrencyCode,
+	IndexName,
+	ArtisanId,
+	ISIN,
+	Ticker,
+	TickerAndExchange,
+	SecurityDescription,
+	SecurityType,
+	AssetType,
+	GICSSector,
+	GICSIndustry
+  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]
+  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey
+  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey
+  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')
+  AND EffectiveDate='08-31-2020' AND SecurityType='COM'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Universe</AnnotationText>
+          <DefaultAnnotationText>Source=milsql02
+Catalog=ArtisanWarehouseReporting
+Table=SELECT
+	EDMSecurityId,
+	IssueCurrencyCode,
+	IndexName,
+	ArtisanId,
+	ISIN,
+	Ticker,
+	TickerAndExchange,
+	SecurityDescription,
+	SecurityType,
+	AssetType,
+	GICSSector,
+	GICSIndustry
+  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]
+  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey
+  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey
+  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')
+  AND EffectiveDate='08-31-2020' AND SecurityType='COM'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="EDMSecurityId" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="Int32" />
+            <Field name="IssueCurrencyCode" size="100" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="IndexName" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="ArtisanId" size="50" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="ISIN" size="50" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="Ticker" size="100" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="TickerAndExchange" size="30" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="SecurityDescription" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="SecurityType" size="100" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="AssetType" size="100" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="GICSSector" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+            <Field name="GICSIndustry" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanWarehouseReporting;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	EDMSecurityId,&#xA;	IssueCurrencyCode,&#xA;	IndexName,&#xA;	ArtisanId,&#xA;	ISIN,&#xA;	Ticker,&#xA;	TickerAndExchange,&#xA;	SecurityDescription,&#xA;	SecurityType,&#xA;	AssetType,&#xA;	GICSSector,&#xA;	GICSIndustry&#xA;  FROM [ArtisanWarehouseReporting].[cube].[IndexConstituent]&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.BenchmarkIndex ON BenchmarkIndex.IndexKey = IndexConstituent.IndexKey&#xA;  LEFT JOIN [ArtisanWarehouseReporting].cube.Security ON Security.SecurityKey = IndexConstituent.SecurityKey&#xA;  WHERE IndexName IN ('Russell 2000 Index With Dividends', 'Russell 1000 Index With Dividends')&#xA;  AND EffectiveDate='08-31-2020' AND SecurityType='COM'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=""|||SELECT
+	securityId,
+	effectiveDate,
+	netChg1d,
+	pctChg1d,
+	localPrice,
+	localPriceOpen,
+	localPriceClose,
+	localHigh52week,
+	localLow52week,
+	currMktCap,
+	currMktCapUSD,
+	netDebt,
+	annualDividend,
+	dividendYield,
+	volume,
+	pbRatio,
+	eps,
+	vwap,
+	bvps,
+	roe,
+	cash,
+	ebit,
+	ebitda,
+	longTermDebt,
+	netIncome,
+	totalAssets,
+	totalDebt,
+	totalEquity,
+	totalLiabilities,
+	totalFeeIncome
+FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]
+LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId
+WHERE effectiveDate&gt;='01-01-2018'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Prices and Returns</AnnotationText>
+          <DefaultAnnotationText>Source=milsql02
+Catalog=ArtisanRepository
+Table=SELECT
+	securityId,
+	effectiveDate,
+	netChg1d,
+	pctChg1d,
+	localPrice,
+	localPriceOpen,
+	localPriceClose,
+	localHigh52week,
+	localLow52week,
+	currMktCap,
+	currMktCapUSD,
+	netDebt,
+	annualDividend,
+	dividendYield,
+	volume,
+	pbRatio,
+	eps,
+	vwap,
+	bvps,
+	roe,
+	cash,
+	ebit,
+	ebitda,
+	longTermDebt,
+	netIncome,
+	totalAssets,
+	totalDebt,
+	totalEquity,
+	totalLiabilities,
+	totalFeeIncome
+FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]
+LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId
+WHERE effectiveDate&gt;='01-01-2018'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="securityId" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="Int32" />
+            <Field name="effectiveDate" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="DateTime" />
+            <Field name="netChg1d" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="pctChg1d" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="localPrice" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="localPriceOpen" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="localPriceClose" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="localHigh52week" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="localLow52week" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="currMktCap" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="currMktCapUSD" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="netDebt" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="annualDividend" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="dividendYield" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="volume" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="pbRatio" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="eps" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="vwap" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="bvps" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="roe" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="cash" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="ebit" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="ebitda" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="longTermDebt" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="netIncome" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalAssets" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalDebt" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalEquity" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalLiabilities" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalFeeIncome" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	netChg1d,&#xA;	pctChg1d,&#xA;	localPrice,&#xA;	localPriceOpen,&#xA;	localPriceClose,&#xA;	localHigh52week,&#xA;	localLow52week,&#xA;	currMktCap,&#xA;	currMktCapUSD,&#xA;	netDebt,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	bvps,&#xA;	roe,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome&#xA;FROM [ArtisanRepository].[dbo].[aplp_bloomberg_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_bloomberg_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="138" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="EDMSecurityId" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="securityId" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_securityId" selected="True" rename="BBG_securityId" input="Right_" />
+                <SelectField field="Right_effectiveDate" selected="True" rename="BBG_effectiveDate" input="Right_" />
+                <SelectField field="Right_netChg1d" selected="True" rename="BBG_netChg1d" input="Right_" />
+                <SelectField field="Right_pctChg1d" selected="True" rename="BBG_pctChg1d" input="Right_" />
+                <SelectField field="Right_localPrice" selected="True" rename="BBG_localPrice" input="Right_" />
+                <SelectField field="Right_localPriceOpen" selected="True" rename="BBG_localPriceOpen" input="Right_" />
+                <SelectField field="Right_localPriceClose" selected="True" rename="BBG_localPriceClose" input="Right_" />
+                <SelectField field="Right_localHigh52week" selected="True" rename="BBG_localHigh52week" input="Right_" />
+                <SelectField field="Right_localLow52week" selected="True" rename="BBG_localLow52week" input="Right_" />
+                <SelectField field="Right_currMktCap" selected="True" rename="BBG_currMktCap" input="Right_" />
+                <SelectField field="Right_currMktCapUSD" selected="True" rename="BBG_currMktCapUSD" input="Right_" />
+                <SelectField field="Right_netDebt" selected="True" rename="BBG_netDebt" input="Right_" />
+                <SelectField field="Right_annualDividend" selected="True" rename="BBG_annualDividend" input="Right_" />
+                <SelectField field="Right_dividendYield" selected="True" rename="BBG_dividendYield" input="Right_" />
+                <SelectField field="Right_volume" selected="True" rename="BBG_volume" input="Right_" />
+                <SelectField field="Right_pbRatio" selected="True" rename="BBG_pbRatio" input="Right_" />
+                <SelectField field="Right_eps" selected="True" rename="BBG_eps" input="Right_" />
+                <SelectField field="Right_vwap" selected="True" rename="BBG_vwap" input="Right_" />
+                <SelectField field="Right_bvps" selected="True" rename="BBG_bvps" input="Right_" />
+                <SelectField field="Right_roe" selected="True" rename="BBG_roe" input="Right_" />
+                <SelectField field="Right_cash" selected="True" rename="BBG_cash" input="Right_" />
+                <SelectField field="Right_ebit" selected="True" rename="BBG_ebit" input="Right_" />
+                <SelectField field="Right_ebitda" selected="True" rename="BBG_ebitda" input="Right_" />
+                <SelectField field="Right_longTermDebt" selected="True" rename="BBG_longTermDebt" input="Right_" />
+                <SelectField field="Right_netIncome" selected="True" rename="BBG_netIncome" input="Right_" />
+                <SelectField field="Right_totalAssets" selected="True" rename="BBG_totalAssets" input="Right_" />
+                <SelectField field="Right_totalDebt" selected="True" rename="BBG_totalDebt" input="Right_" />
+                <SelectField field="Right_totalEquity" selected="True" rename="BBG_totalEquity" input="Right_" />
+                <SelectField field="Right_totalLiabilities" selected="True" rename="BBG_totalLiabilities" input="Right_" />
+                <SelectField field="Right_totalFeeIncome" selected="True" rename="BBG_totalFeeIncome" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="426" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=""|||SELECT
+	securityId,
+	effectiveDate,
+	marketCap,
+	annualDividend,
+	dividendYield,
+	volume,
+	pbRatio,
+	eps,
+	vwap,
+	peFy1,
+	bvps,
+	roe,
+	fiscalFreeCashFlowEstimate,
+	cash,
+	ebit,
+	ebitda,
+	longTermDebt,
+	netIncome,
+	operatingExpense,
+	totalAssets,
+	totalDebt,
+	totalEquity,
+	totalLiabilities,
+	totalFeeIncome,
+	betaSP500,
+	betaACWI
+	--price3mAgo,
+	--localPrice1yrAgo,
+	--localPrice3yrAgo,
+	--priceChg3M,
+	--priceChg52Wk,
+	--totalReturn3m,
+	--totalReturn1y
+FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]
+LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId
+WHERE effectiveDate&gt;='01-01-2018'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Additional Features</AnnotationText>
+          <DefaultAnnotationText>Source=milsql02
+Catalog=ArtisanRepository
+Table=SELECT
+	securityId,
+	effectiveDate,
+	marketCap,
+	annualDividend,
+	dividendYield,
+	volume,
+	pbRatio,
+	eps,
+	vwap,
+	peFy1,
+	bvps,
+	roe,
+	fiscalFreeCashFlowEstimate,
+	cash,
+	ebit,
+	ebitda,
+	longTermDebt,
+	netIncome,
+	operatingExpense,
+	totalAssets,
+	totalDebt,
+	totalEquity,
+	totalLiabilities,
+	totalFeeIncome,
+	betaSP500,
+	betaACWI
+	--price3mAgo,
+	--localPrice1yrAgo,
+	--localPrice3yrAgo,
+	--priceChg3M,
+	--priceChg52Wk,
+	--totalReturn3m,
+	--totalReturn1y
+FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]
+LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId
+WHERE effectiveDate&gt;='01-01-2018'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="securityId" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="Int32" />
+            <Field name="effectiveDate" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="DateTime" />
+            <Field name="marketCap" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="annualDividend" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="dividendYield" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="volume" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="pbRatio" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="eps" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="vwap" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="peFy1" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="bvps" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="roe" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="fiscalFreeCashFlowEstimate" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="cash" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="ebit" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="ebitda" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="longTermDebt" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="netIncome" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="operatingExpense" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalAssets" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalDebt" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalEquity" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalLiabilities" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="totalFeeIncome" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="betaSP500" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+            <Field name="betaACWI" size="255" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanRepository;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	securityId,&#xA;	effectiveDate,&#xA;	marketCap,&#xA;	annualDividend,&#xA;	dividendYield,&#xA;	volume,&#xA;	pbRatio,&#xA;	eps,&#xA;	vwap,&#xA;	peFy1,&#xA;	bvps,&#xA;	roe,&#xA;	fiscalFreeCashFlowEstimate,&#xA;	cash,&#xA;	ebit,&#xA;	ebitda,&#xA;	longTermDebt,&#xA;	netIncome,&#xA;	operatingExpense,&#xA;	totalAssets,&#xA;	totalDebt,&#xA;	totalEquity,&#xA;	totalLiabilities,&#xA;	totalFeeIncome,&#xA;	betaSP500,&#xA;	betaACWI&#xA;	--price3mAgo,&#xA;	--localPrice1yrAgo,&#xA;	--localPrice3yrAgo,&#xA;	--priceChg3M,&#xA;	--priceChg52Wk,&#xA;	--totalReturn3m,&#xA;	--totalReturn1y&#xA;FROM [ArtisanRepository].[dbo].[aplp_factset_time_series_data]&#xA;LEFT JOIN [ArtisanRepository].[dbo].[aplp_instrument] ON aplp_instrument.instrumentId = aplp_factset_time_series_data.instrumentId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="510" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="EDMSecurityId" />
+            <Field field="BBG_effectiveDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="securityId" />
+            <Field field="effectiveDate" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_securityId" selected="True" rename="FS_securityId" input="Right_" />
+                <SelectField field="Right_effectiveDate" selected="True" rename="FS_effectiveDate" input="Right_" />
+                <SelectField field="Right_marketCap" selected="True" rename="FS_marketCap" input="Right_" />
+                <SelectField field="Right_annualDividend" selected="True" rename="FS_annualDividend" input="Right_" />
+                <SelectField field="Right_dividendYield" selected="True" rename="FS_dividendYield" input="Right_" />
+                <SelectField field="Right_volume" selected="True" rename="FS_volume" input="Right_" />
+                <SelectField field="Right_pbRatio" selected="True" rename="FS_pbRatio" input="Right_" />
+                <SelectField field="Right_eps" selected="True" rename="FS_eps" input="Right_" />
+                <SelectField field="Right_vwap" selected="True" rename="FS_vwap" input="Right_" />
+                <SelectField field="Right_peFy1" selected="True" rename="FS_peFy1" input="Right_" />
+                <SelectField field="Right_bvps" selected="True" rename="FS_bvps" input="Right_" />
+                <SelectField field="Right_roe" selected="True" rename="FS_roe" input="Right_" />
+                <SelectField field="Right_fiscalFreeCashFlowEstimate" selected="True" rename="FS_fiscalFreeCashFlowEstimate" input="Right_" />
+                <SelectField field="Right_cash" selected="True" rename="FS_cash" input="Right_" />
+                <SelectField field="Right_ebit" selected="True" rename="FS_ebit" input="Right_" />
+                <SelectField field="Right_ebitda" selected="True" rename="FS_ebitda" input="Right_" />
+                <SelectField field="Right_longTermDebt" selected="True" rename="FS_longTermDebt" input="Right_" />
+                <SelectField field="Right_netIncome" selected="True" rename="FS_netIncome" input="Right_" />
+                <SelectField field="Right_operatingExpense" selected="True" rename="FS_operatingExpense" input="Right_" />
+                <SelectField field="Right_totalAssets" selected="True" rename="FS_totalAssets" input="Right_" />
+                <SelectField field="Right_totalDebt" selected="True" rename="FS_totalDebt" input="Right_" />
+                <SelectField field="Right_totalEquity" selected="True" rename="FS_totalEquity" input="Right_" />
+                <SelectField field="Right_totalLiabilities" selected="True" rename="FS_totalLiabilities" input="Right_" />
+                <SelectField field="Right_totalFeeIncome" selected="True" rename="FS_totalFeeIncome" input="Right_" />
+                <SelectField field="Right_betaSP500" selected="True" rename="FS_betaSP500" input="Right_" />
+                <SelectField field="Right_betaACWI" selected="True" rename="FS_betaACWI" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeFormat([BBG_effectiveDate],&quot;%A&quot;)" field="Day of Week" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Day of Week = DateTimeFormat([BBG_effectiveDate],"%A")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="330" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Day of Week] != "Saturday"
+AND
+[Day of Week] != "Sunday"</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>Day of Week</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-08-29 16:47:30</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Saturday</Operand>
+              <StartDate>2020-08-29 16:47:30</StartDate>
+              <EndDate>2020-08-29 16:47:30</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Day of Week] != "Saturday"
+AND
+[Day of Week] != "Sunday"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="594" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=ArtisanApplication;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=""|||SELECT
+	edmSecurityId,
+	effectiveDate,
+	totalReturn3MonthLocal,
+	totalReturn3YearLocal
+FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]
+WHERE effectiveDate&gt;='01-01-2018'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>3M &amp; 3Y Performance</AnnotationText>
+          <DefaultAnnotationText>Source=milsql02
+Catalog=ArtisanApplication
+Table=SELECT
+	edmSecurityId,
+	effectiveDate,
+	totalReturn3MonthLocal,
+	totalReturn3YearLocal
+FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]
+WHERE effectiveDate&gt;='01-01-2018'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="edmSecurityId" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	totalReturn3MonthLocal,&#xA;	totalReturn3YearLocal&#xA;FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="Int32" />
+            <Field name="effectiveDate" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	totalReturn3MonthLocal,&#xA;	totalReturn3YearLocal&#xA;FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="DateTime" />
+            <Field name="totalReturn3MonthLocal" scale="10" size="24" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	totalReturn3MonthLocal,&#xA;	totalReturn3YearLocal&#xA;FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="FixedDecimal" />
+            <Field name="totalReturn3YearLocal" scale="10" size="24" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=milsql02;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	totalReturn3MonthLocal,&#xA;	totalReturn3YearLocal&#xA;FROM [ArtisanApplication].[edm].[SecurityReturnFactSetEod]&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="702" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="EDMSecurityId" />
+            <Field field="BBG_effectiveDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="edmSecurityId" />
+            <Field field="effectiveDate" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_edmSecurityId" selected="True" rename="Right_edmSecurityId" input="Right_" />
+                <SelectField field="Right_effectiveDate" selected="True" rename="Right_effectiveDate" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="606" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="786" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="774" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="18">odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name="";Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=""|||SELECT
+	edmSecurityId,
+	effectiveDate,
+	rawX,
+	rawY,
+	rawZ,
+	name AS formula
+FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]
+LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId
+WHERE effectiveDate&gt;='01-01-2018'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Market Map</AnnotationText>
+          <DefaultAnnotationText>Source=stggroup2sql
+Catalog=ArtisanApplication
+Table=SELECT
+	edmSecurityId,
+	effectiveDate,
+	rawX,
+	rawY,
+	rawZ,
+	name AS formula
+FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]
+LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId
+WHERE effectiveDate&gt;='01-01-2018'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="edmSecurityId" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="Int32" />
+            <Field name="effectiveDate" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="Date" />
+            <Field name="rawX" scale="4" size="21" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="FixedDecimal" />
+            <Field name="rawY" scale="4" size="21" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="FixedDecimal" />
+            <Field name="rawZ" scale="4" size="21" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="FixedDecimal" />
+            <Field name="formula" size="32" source="File: odb:Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ArtisanApplication;Data Source=stggroup2sql;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=BBEALS-L2;Initial File Name=&quot;&quot;;Use Encryption for Data=False;Tag with column collation when possible=False;MARS Connection=False;DataTypeCompatibility=0;Trust Server Certificate=False;Application Intent=READWRITE;MultisubnetFailover=False;Use FMTONLY=False;Authentication=&quot;&quot;|||SELECT&#xA;	edmSecurityId,&#xA;	effectiveDate,&#xA;	rawX,&#xA;	rawY,&#xA;	rawZ,&#xA;	name AS formula&#xA;FROM [ArtisanApplication].[grwimp].[MarketMapQuartileInputs]&#xA;LEFT JOIN grwimp.MarketMapFormula ON MarketMapFormula.id = MarketMapQuartileInputs.formulaId&#xA;WHERE effectiveDate&gt;='01-01-2018'" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="846" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="effectiveDate" selected="True" type="DateTime" size="19" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="942" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="EDMSecurityId" />
+            <Field field="BBG_effectiveDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="edmSecurityId" />
+            <Field field="effectiveDate" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_edmSecurityId" selected="False" rename="Left_Right_edmSecurityId" input="Left_" />
+                <SelectField field="Left_Right_effectiveDate" selected="False" input="Left_" />
+                <SelectField field="Right_edmSecurityId" selected="False" rename="Right_edmSecurityId" input="Right_" />
+                <SelectField field="Right_effectiveDate" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1038" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EDMSecurityId" selected="False" />
+            <SelectField field="IssueCurrencyCode" selected="False" />
+            <SelectField field="IndexName" selected="True" rename="Index" />
+            <SelectField field="ArtisanId" selected="False" />
+            <SelectField field="TickerAndExchange" selected="False" />
+            <SelectField field="SecurityType" selected="False" />
+            <SelectField field="AssetType" selected="False" />
+            <SelectField field="BBG_securityId" selected="False" />
+            <SelectField field="BBG_effectiveDate" selected="True" rename="Date" />
+            <SelectField field="BBG_netChg1d" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_pctChg1d" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_localPrice" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_localPriceOpen" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_localPriceClose" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_localHigh52week" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_localLow52week" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_currMktCap" selected="False" type="Double" size="8" />
+            <SelectField field="BBG_currMktCapUSD" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_netDebt" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_annualDividend" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_dividendYield" selected="False" type="Double" size="8" />
+            <SelectField field="BBG_volume" selected="True" type="Int64" size="8" />
+            <SelectField field="BBG_pbRatio" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_eps" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_vwap" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_bvps" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_roe" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_cash" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_ebit" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_ebitda" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_longTermDebt" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_netIncome" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_totalAssets" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_totalDebt" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_totalEquity" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_totalLiabilities" selected="True" type="Double" size="8" />
+            <SelectField field="BBG_totalFeeIncome" selected="True" type="Double" size="8" />
+            <SelectField field="Day of Week" selected="False" />
+            <SelectField field="FS_securityId" selected="False" />
+            <SelectField field="FS_effectiveDate" selected="False" />
+            <SelectField field="FS_marketCap" selected="True" type="Double" size="8" />
+            <SelectField field="FS_annualDividend" selected="True" type="Double" size="8" />
+            <SelectField field="FS_dividendYield" selected="True" type="Double" size="8" />
+            <SelectField field="FS_volume" selected="True" type="Double" size="8" />
+            <SelectField field="FS_pbRatio" selected="True" type="Double" size="8" />
+            <SelectField field="FS_eps" selected="True" type="Double" size="8" />
+            <SelectField field="FS_vwap" selected="True" type="Double" size="8" />
+            <SelectField field="FS_peFy1" selected="True" type="Double" size="8" />
+            <SelectField field="FS_bvps" selected="True" type="Double" size="8" />
+            <SelectField field="FS_roe" selected="True" type="Double" size="8" />
+            <SelectField field="FS_fiscalFreeCashFlowEstimate" selected="True" type="Double" size="8" />
+            <SelectField field="FS_cash" selected="True" type="Double" size="8" />
+            <SelectField field="FS_ebit" selected="True" type="Double" size="8" />
+            <SelectField field="FS_ebitda" selected="True" type="Double" size="8" />
+            <SelectField field="FS_longTermDebt" selected="True" type="Double" size="8" />
+            <SelectField field="FS_netIncome" selected="True" type="Double" size="8" />
+            <SelectField field="FS_operatingExpense" selected="True" type="Double" size="8" />
+            <SelectField field="FS_totalAssets" selected="True" type="Double" size="8" />
+            <SelectField field="FS_totalDebt" selected="True" type="Double" size="8" />
+            <SelectField field="FS_totalEquity" selected="True" type="Double" size="8" />
+            <SelectField field="FS_totalLiabilities" selected="True" type="Double" size="8" />
+            <SelectField field="FS_totalFeeIncome" selected="True" type="Double" size="8" />
+            <SelectField field="FS_betaSP500" selected="True" type="Double" size="8" />
+            <SelectField field="FS_betaACWI" selected="True" type="Double" size="8" />
+            <SelectField field="totalReturn3MonthLocal" selected="True" type="Double" size="8" />
+            <SelectField field="totalReturn3YearLocal" selected="True" type="Double" size="8" />
+            <SelectField field="rawX" selected="False" type="Double" size="8" />
+            <SelectField field="rawY" selected="False" type="Double" size="8" />
+            <SelectField field="rawZ" selected="True" rename="Z" type="Double" size="8" />
+            <SelectField field="Right_edmSecurityId" selected="False" />
+            <SelectField field="Right_effectiveDate" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1206" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>|</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Artisan Universe Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="5" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="5" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="5" Connection="Left" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="10" Connection="Left" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="15" Connection="Left" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="1" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Artisan Databases</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
