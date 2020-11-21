@@ -24,7 +24,7 @@ date_format = '%Y%m%d'
 today = now_time.strftime(date_format)
 end_time = datetime(2020, 10, 31)
 start_time = datetime(2018, 1 , 1)
-universe = pd.read_csv('Universe.csv')
+universe = pd.read_csv(r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Universe.csv')
 ticker_list = universe['Ticker'].to_list()
 
 ######################################

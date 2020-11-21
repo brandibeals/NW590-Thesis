@@ -787,7 +787,7 @@ WHERE effectiveDate&gt;='01-01-2018'</DefaultAnnotationText>
             <SelectField field="BBG_localPriceClose" selected="True" type="Double" size="8" />
             <SelectField field="BBG_localHigh52week" selected="True" type="Double" size="8" />
             <SelectField field="BBG_localLow52week" selected="True" type="Double" size="8" />
-            <SelectField field="BBG_currMktCap" selected="False" type="Double" size="8" />
+            <SelectField field="BBG_currMktCap" selected="True" type="Double" size="8" />
             <SelectField field="BBG_currMktCapUSD" selected="True" type="Double" size="8" />
             <SelectField field="BBG_netDebt" selected="True" type="Double" size="8" />
             <SelectField field="BBG_annualDividend" selected="True" type="Double" size="8" />

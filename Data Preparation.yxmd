@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="242" />
+        <Position x="54" y="54.00002" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -28,6 +28,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Index" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="ISIN" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="SecurityDescription" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="GICSSector" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
@@ -40,11 +41,9 @@
             <Field name="BBG_localPriceClose" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_localHigh52week" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_localLow52week" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
-            <Field name="BBG_currMktCap" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_currMktCapUSD" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_netDebt" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_annualDividend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
-            <Field name="BBG_dividendYield" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_volume" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_pbRatio" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="BBG_eps" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
@@ -87,36 +86,16 @@
             <Field name="FS_betaACWI" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="totalReturn3MonthLocal" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="totalReturn3YearLocal" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
-            <Field name="rawX" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
-            <Field name="rawY" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
-            <Field name="rawZ" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
+            <Field name="Z" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
             <Field name="formula" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\Artisan Universe Data.csv" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
-    <Node ToolID="2">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
-        <Position x="162" y="242" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Mode>Random</Mode>
-          <N>5</N>
-          <GroupFields orderChanged="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>Random 1 in 5</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
-    </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="354" y="242" />
+        <Position x="306" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -136,7 +115,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="258" y="242" />
+        <Position x="234" y="54.00002" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -151,11 +130,9 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="BBG_localPriceClose" selected="True" type="Float" size="4" />
             <SelectField field="BBG_localHigh52week" selected="True" type="Float" size="4" />
             <SelectField field="BBG_localLow52week" selected="True" type="Float" size="4" />
-            <SelectField field="BBG_currMktCap" selected="True" type="Float" size="4" />
             <SelectField field="BBG_currMktCapUSD" selected="True" type="Float" size="4" />
             <SelectField field="BBG_netDebt" selected="True" type="Float" size="4" />
             <SelectField field="BBG_annualDividend" selected="True" type="Float" size="4" />
-            <SelectField field="BBG_dividendYield" selected="True" type="Float" size="4" />
             <SelectField field="BBG_volume" selected="True" type="Float" size="4" />
             <SelectField field="BBG_pbRatio" selected="True" type="Float" size="4" />
             <SelectField field="BBG_eps" selected="True" type="Float" size="4" />
@@ -175,10 +152,10 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="FS_marketCap" selected="True" type="Float" size="4" />
             <SelectField field="FS_annualDividend" selected="True" type="Float" size="4" />
             <SelectField field="FS_dividendYield" selected="True" type="Float" size="4" />
-            <SelectField field="FS_volume" selected="True" type="Int32" size="4" />
+            <SelectField field="FS_volume" selected="True" type="Float" size="4" />
             <SelectField field="FS_pbRatio" selected="True" type="Float" size="4" />
             <SelectField field="FS_eps" selected="True" type="Float" size="4" />
-            <SelectField field="FS_vwap" selected="True" type="Int32" size="4" />
+            <SelectField field="FS_vwap" selected="True" type="Float" size="4" />
             <SelectField field="FS_peFy1" selected="True" type="Float" size="4" />
             <SelectField field="FS_bvps" selected="True" type="Float" size="4" />
             <SelectField field="FS_roe" selected="True" type="Float" size="4" />
@@ -198,6 +175,8 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="FS_betaACWI" selected="True" type="Float" size="4" />
             <SelectField field="totalReturn3MonthLocal" selected="True" type="Float" size="4" />
             <SelectField field="totalReturn3YearLocal" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_currMktCap" selected="True" type="Float" size="4" />
+            <SelectField field="BBG_dividendYield" selected="True" type="Float" size="4" />
             <SelectField field="rawX" selected="True" type="Float" size="4" />
             <SelectField field="rawY" selected="True" type="Float" size="4" />
             <SelectField field="rawZ" selected="True" type="Float" size="4" />
@@ -214,14 +193,14 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1242" y="242" />
+        <Position x="1326" y="54.00002" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
             <FormulaField expression="IIF(IsNull([FS_volume]) OR [FS_volume]=0,&#xA;	[BBG_volume], [FS_volume]*1000)" field="Volume" size="4" type="Int32" />
             <FormulaField expression="IIF(IsNull([FS_vwap]) OR [FS_vwap]=0,&#xA;	[BBG_vwap], [FS_vwap])" field="VolumeWeightedAveragePrice" size="4" type="Int32" />
-            <FormulaField expression="IIF(IsNull([FS_marketCap]) OR [FS_marketCap]=0,&#xA;	IIF(IsNull([BBG_currMktCapUSD]),&#xA;	[BBG_currMktCap],&#xA;	[BBG_currMktCapUSD])&#xA;,[FS_marketCap])" field="MarketCap" size="4" type="Float" />
+            <FormulaField expression="IIF(IsNull([FS_marketCap]) OR [FS_marketCap]=0,&#xA;	[BBG_currMktCapUSD], [FS_marketCap])" field="MarketCap" size="4" type="Float" />
             <FormulaField expression="IIF(IsNull([FS_annualDividend]),[BBG_annualDividend],[FS_annualDividend])" field="AnnualDividend" size="4" type="Float" />
             <FormulaField expression="IIF(IsNull([FS_totalAssets]),[BBG_totalAssets],[FS_totalAssets])" field="Assets" size="4" type="Float" />
             <FormulaField expression="IIF(IsNull([FS_totalDebt]),[BBG_totalDebt],[FS_totalDebt])" field="Debt" size="4" type="Float" />
@@ -252,19 +231,223 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1986" y="294" />
+        <Position x="2562" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
+            <SelectField field="Return_1D_AdjClose" selected="True" />
+            <SelectField field="Return_1D_Close" selected="True" />
+            <SelectField field="Return_30D_AdjClose" selected="True" />
+            <SelectField field="Return_30D_Close" selected="True" />
+            <SelectField field="DateMonth" selected="False" />
+            <SelectField field="Date" selected="True" rename="DATE" />
             <SelectField field="Index" selected="True" rename="INDEX" />
+            <SelectField field="ISIN" selected="True" />
             <SelectField field="Ticker" selected="True" rename="TICKER" />
             <SelectField field="SecurityDescription" selected="True" rename="SEC_DESC" />
             <SelectField field="GICSSector" selected="True" rename="SECTOR" />
             <SelectField field="GICSIndustry" selected="True" rename="INDUSTRY" />
-            <SelectField field="Date" selected="True" rename="DATE" />
+            <SelectField field="FS_betaACWI" selected="True" rename="BETA_ACWI" />
+            <SelectField field="DFF" selected="True" rename="INT_RATE" type="Float" size="4" />
+            <SelectField field="DEXUSEU" selected="True" rename="EX_RATE" type="Float" size="4" />
+            <SelectField field="Mkt-RF" selected="False" type="Float" size="4" />
+            <SelectField field="SMB" selected="False" type="Float" size="4" />
+            <SelectField field="HML" selected="False" type="Float" size="4" />
+            <SelectField field="RF" selected="False" type="Float" size="4" />
+            <SelectField field="Mom" selected="False" type="Float" size="4" />
+            <SelectField field="OpenPrice" selected="True" rename="PRICE_OPEN" />
+            <SelectField field="ClosePrice" selected="True" rename="PRICE_CLOSE" />
+            <SelectField field="PriceChange" selected="True" rename="NET_CHG_1D" />
+            <SelectField field="PriceChange%" selected="True" rename="PCT_CHG_1D" />
+            <SelectField field="High" selected="True" rename="PRICE_HIGH" />
+            <SelectField field="Low" selected="True" rename="PRICE_LOW" />
+            <SelectField field="Volume" selected="True" rename="VOLUME" />
+            <SelectField field="VolumeWeightedAveragePrice" selected="True" rename="VWAP" />
+            <SelectField field="MarketCap" selected="True" rename="MARKET_CAP" />
+            <SelectField field="AnnualDividend" selected="True" rename="ANNUAL_DIV" />
+            <SelectField field="Assets" selected="True" rename="ASSETS" />
+            <SelectField field="Debt" selected="True" rename="DEBT" />
+            <SelectField field="Equity" selected="True" rename="EQUITY" />
+            <SelectField field="Liabilities" selected="True" rename="LIABILITIES" />
+            <SelectField field="FS_operatingExpense" selected="True" rename="OPEX" />
+            <SelectField field="FeeIncome" selected="True" rename="FEE_INCOME" />
+            <SelectField field="NetIncome" selected="True" rename="NET_INCOME" />
+            <SelectField field="Cash" selected="True" rename="CASH" />
+            <SelectField field="BBG_netDebt" selected="True" rename="NET_DEBT" />
+            <SelectField field="LongTermDebt" selected="True" rename="LTD" />
+            <SelectField field="FS_fiscalFreeCashFlowEstimate" selected="True" rename="FCF" />
+            <SelectField field="EarningsBeforeInterestTaxes" selected="True" rename="EBIT" />
+            <SelectField field="EarningsBeforeInterestTaxesDepreciationAmortization" selected="True" rename="EBITDA" />
+            <SelectField field="EarningsPerShare" selected="True" rename="EPS" />
+            <SelectField field="FS_peFy1" selected="True" rename="PE_FY1" />
+            <SelectField field="BookValuePerShare" selected="True" rename="BVPS" />
+            <SelectField field="PriceToBookRatio" selected="True" rename="PBR" />
+            <SelectField field="ReturnOnEquity" selected="True" rename="ROE" />
+            <SelectField field="totalReturn3MonthLocal" selected="True" rename="X" />
+            <SelectField field="totalReturn3YearLocal" selected="True" rename="Y" />
+            <SelectField field="Z" selected="True" type="Byte" size="1" />
+            <SelectField field="formula" selected="True" rename="MM FORMULA" />
+            <SelectField field="E_1_1_Environmental_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_10_Carbon_Intensity_Trend" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_11_Renewable_Energy_Use" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_Environmental_Management_System" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_1_Biodiversity_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_2_Site_Closure___Rehabilitation" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_4_Oil_Spill_Disclosure___Performance" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_5_Cyanide_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_6_1_Solid_Waste_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_6_2_Mineral_Waste_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_6_3_Effluent_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_6_4_Offshore_Well_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_6_5_Radioactive_Waste_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_7_Water_Intensity" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_7_1_Water_Risk_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_7_2_Water_Intensity_Trend" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_8_Forest_Certifications" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_9_Deforestation_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_2_10_Deforestation_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_EMS_Certification" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_1_Emergency_Response_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_2_Hazardous_Waste_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_3_Non_GHG_Air_Emissions_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_4_Water_Management_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_3_6_Tailings_Management_and_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_6_Scope_of_GHG_Reporting" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_6_1_GHG_Risk_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_6_2_Physical_Climate_Risk_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_7_0_GHG_Reduction_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_7_1_Green_Logistics_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_8_Renewable_Energy_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_1_9_Carbon_Intensity" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_Green_Procurement_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_1_Supplier_Environmental_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_2_Supplier_Environmental_Certifications" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_3_Sustainable_Agriculture_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_5_Food___Beverage_Sustainability_Initiatives" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_6_Green_Outsourced_Logistics_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_7_Recycled_Material_Use" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_8_FSC_Certified_Sourcing" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_9_Sustainable_Food_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_2_1_11_Shipbreaking_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_1_Sustainable_Products___Services" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_3_Fleet_Emissions" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_4_Fleet_Emissions_Trend" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_5_Sustainable_Mobility_Products" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_6_Eco_Design" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_7_Product_Stewardship_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_8_Organic_Products" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_9_GMO_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_10_Credit___Loan_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_11_Responsible_Asset_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_12_Real_Estate_LCA" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_13_Green_Buildings_Investments" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_14_Share_of_Green_Buildings" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_15_Sustainable_Financial_Initiatives" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_16_Hazardous_Products" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_17_Carbon_Intensity_of_Generation" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_18_Transmission_Loss_Rate" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_19_Hazardous_Substances_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_20_Fleet_Age" selected="True" type="Int16" size="2" />
+            <SelectField field="E_3_1_21_Carbon_Intensity_Trend_of_Generation" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_1_Bribery___Corruption_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_1_1_Bribery___Corruption_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_2_Whistleblower_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_2_1_Business_Ethics_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_Global_Compact_Signatory" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_1_PRI_Signatory" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_2_Responsible_Investment_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_3_UNEPFI_Signatory" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_4_Green_Building_Memberships" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_5_Equator_Principles_Signatory" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_6_Responsible_Investment_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_7_Corporate_Finance___ESG_Integration" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_8_Responsible_Product_Offering" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_3_9_Underwriting_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_1_Money_Laundering_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_2_Compliance_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_3_Animal_Testing_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_3_1_Animal_Testing_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_4_Animal_Welfare_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_4_1_Animal_Welfare_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_5_Policy_on_Emerging_Technologies" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_6_Clinical_Trial_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="G_1_4_7_Clinical_Trial_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="G_2_1_ESG_Reporting_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="G_2_2_Verification_of_ESG_Reporting" selected="True" type="Int16" size="2" />
+            <SelectField field="G_2_5_ESG_Governance" selected="True" type="Int16" size="2" />
+            <SelectField field="G_3_1_Political_Involvement_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="G_3_2_Lobbying_and_Political_Expenses" selected="True" type="Int16" size="2" />
+            <SelectField field="G_3_3_1_Transparency_on_Government_Payments" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_1_Freedom_of_Association_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_1_1_Working_Hours_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_2_Discrimination_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_3_Diversity_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_3_1_Gender_Pay_Equality_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_3_2_Gender_Pay_Disclosure" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_4_Collective_Bargaining_Agreements" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_5_Employee_Turnover_Rate" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_5_1_Percentage_of_Temporary_Workers" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_5_2_Human_Capital_Development" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_1_Employee_Training" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_2_1_Health_and_Safety_Management_System" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_3_HIV_Aids_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_4_Health___Safety_Certifications" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_5_LTIR_Trend" selected="True" type="Int16" size="2" />
+            <SelectField field="S_1_6_6_Employee_Fatality_Rate" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_1_Scope_of_Social_Supplier_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_1_3_Conflict_Minerals_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_1_3_1_Conflict_Minerals_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_2_2_1_Supply_Chain_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_2_3_Social_Supplier_Certification" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_2_4_Fair_Trade_Products" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_2_5_Contractor_Safety_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_2_2_6_Contractor_Fatalities" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_1_Responsible_Marketing_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_2_Advertising_Ethics_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_3_Data_Privacy___Security_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_3_1_Data_Privacy_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_3_2_Data_Request_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_3_3_Cybersecurity_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_4_Electromagnetic_Safety_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_6_Editorial_Guidelines" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_6_1_Media_Ethics_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_8_Service_Delays" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_9_Product_Health_Statement" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_9_1_Product_and_Service_Safety_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_10_Occupier_Satisfaction_Surveys" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_11_Customer_Eco_Efficiency_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_12_Drug_Promotion_Standards" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_13_Ethical_Marketing_Promotion" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_14_Responsible_Gaming_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_15_Value_Based_Health_Care_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_16_Nutrition_and_Health_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_1_17_Asset_Integrity_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_2_1_QMS_Certifications" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_2_2_Trial_Data_Transparency" selected="True" type="Int16" size="2" />
+            <SelectField field="S_3_2_3_U_S__Drug_Price_Transparency" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_1_Human_Rights_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_1_2_Human_Rights_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_2_Community_Involvement_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_3_Financial_Inclusion" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_4_Access_to_Medicine_Programme" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_5_Neglected_Diseases_R_D" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_6_Equitable_Pricing_and_Availability" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_6_1_Intellectual_Property_Access" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_7_Access_to_Health_Care" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_9_Indigenous_Rights_Policy" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_10_Access_to_Basic_Services" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_11_Community_Development_Programmes" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_2_15_Noise_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_4_1_Systemic_Risk_Management" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_4_2_Systemic_Risk_Reporting" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_4_3_Tier_1_Capital_Buffer" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_4_5_Leverage_Ratio" selected="True" type="Int16" size="2" />
+            <SelectField field="S_4_4_8_Asset_Quality" selected="True" type="Int16" size="2" />
             <SelectField field="BBG_netChg1d" selected="False" />
             <SelectField field="BBG_pctChg1d" selected="False" />
             <SelectField field="BBG_localPrice" selected="False" />
@@ -312,206 +495,11 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="FS_totalLiabilities" selected="False" />
             <SelectField field="FS_totalFeeIncome" selected="False" />
             <SelectField field="FS_betaSP500" selected="False" />
-            <SelectField field="FS_betaACWI" selected="True" />
-            <SelectField field="totalReturn3MonthLocal" selected="True" />
-            <SelectField field="totalReturn3YearLocal" selected="True" />
-            <SelectField field="rawX" selected="True" />
-            <SelectField field="rawY" selected="True" />
-            <SelectField field="rawZ" selected="True" />
-            <SelectField field="formula" selected="True" />
-            <SelectField field="OpenPrice" selected="True" rename="PRICE_OPEN" />
+            <SelectField field="rawX" selected="False" />
+            <SelectField field="rawY" selected="False" />
+            <SelectField field="rawZ" selected="False" />
             <SelectField field="OpenPriceMovingAverage" selected="False" />
-            <SelectField field="ClosePrice" selected="True" rename="PRICE_CLOSE" />
             <SelectField field="ClosePriceMovingAverage" selected="False" />
-            <SelectField field="PriceChange" selected="True" rename="NET_CHG_1D" />
-            <SelectField field="PriceChange%" selected="True" rename="PCT_CHG_1D" />
-            <SelectField field="Volume" selected="True" rename="VOLUME" />
-            <SelectField field="VolumeWeightedAveragePrice" selected="True" rename="VWAP" />
-            <SelectField field="MarketCap" selected="True" rename="MARKET_CAP" />
-            <SelectField field="AnnualDividend" selected="True" rename="ANNUAL_DIV" />
-            <SelectField field="Assets" selected="True" rename="ASSETS" />
-            <SelectField field="Debt" selected="True" rename="DEBT" />
-            <SelectField field="Equity" selected="True" rename="EQUITY" />
-            <SelectField field="Liabilities" selected="True" rename="LIABILITIES" />
-            <SelectField field="FS_operatingExpense" selected="True" rename="OPEX" />
-            <SelectField field="FeeIncome" selected="True" rename="FEE_INCOME" />
-            <SelectField field="NetIncome" selected="True" rename="NET_INCOME" />
-            <SelectField field="Cash" selected="True" rename="CASH" />
-            <SelectField field="BBG_netDebt" selected="True" rename="NET_DEBT" />
-            <SelectField field="LongTermDebt" selected="True" rename="LTD" />
-            <SelectField field="FS_fiscalFreeCashFlowEstimate" selected="True" rename="FCF" />
-            <SelectField field="EarningsBeforeInterestTaxes" selected="True" rename="EBIT" />
-            <SelectField field="EarningsBeforeInterestTaxesDepreciationAmortization" selected="True" rename="EBITDA" />
-            <SelectField field="EarningsPerShare" selected="True" rename="EPS" />
-            <SelectField field="FS_peFy1" selected="True" rename="PE_FY1" />
-            <SelectField field="BookValuePerShare" selected="True" rename="BVPS" />
-            <SelectField field="PriceToBookRatio" selected="True" rename="PBR" />
-            <SelectField field="ReturnOnEquity" selected="True" rename="ROE" />
-            <SelectField field="E_1_1_Environmental_Policy" selected="True" />
-            <SelectField field="E_1_10_Carbon_Intensity_Trend" selected="True" />
-            <SelectField field="E_1_11_Renewable_Energy_Use" selected="True" />
-            <SelectField field="E_1_2_Environmental_Management_System" selected="True" />
-            <SelectField field="E_1_2_1_Biodiversity_Programmes" selected="True" />
-            <SelectField field="E_1_2_2_Site_Closure___Rehabilitation" selected="True" />
-            <SelectField field="E_1_2_4_Oil_Spill_Disclosure___Performance" selected="True" />
-            <SelectField field="E_1_2_5_Cyanide_Management" selected="True" />
-            <SelectField field="E_1_2_6_1_Solid_Waste_Management" selected="True" />
-            <SelectField field="E_1_2_6_2_Mineral_Waste_Management" selected="True" />
-            <SelectField field="E_1_2_6_3_Effluent_Management" selected="True" />
-            <SelectField field="E_1_2_6_4_Offshore_Well_Management" selected="True" />
-            <SelectField field="E_1_2_6_5_Radioactive_Waste_Management" selected="True" />
-            <SelectField field="E_1_2_7_Water_Intensity" selected="True" />
-            <SelectField field="E_1_2_7_1_Water_Risk_Management" selected="True" />
-            <SelectField field="E_1_2_7_2_Water_Intensity_Trend" selected="True" />
-            <SelectField field="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" selected="True" />
-            <SelectField field="E_1_2_8_Forest_Certifications" selected="True" />
-            <SelectField field="E_1_2_9_Deforestation_Policy" selected="True" />
-            <SelectField field="E_1_2_10_Deforestation_Programme" selected="True" />
-            <SelectField field="E_1_3_EMS_Certification" selected="True" />
-            <SelectField field="E_1_3_1_Emergency_Response_Programme" selected="True" />
-            <SelectField field="E_1_3_2_Hazardous_Waste_Management" selected="True" />
-            <SelectField field="E_1_3_3_Non_GHG_Air_Emissions_Programmes" selected="True" />
-            <SelectField field="E_1_3_4_Water_Management_Programmes" selected="True" />
-            <SelectField field="E_1_3_6_Tailings_Management_and_Standards" selected="True" />
-            <SelectField field="E_1_6_Scope_of_GHG_Reporting" selected="True" />
-            <SelectField field="E_1_6_1_GHG_Risk_Management" selected="True" />
-            <SelectField field="E_1_6_2_Physical_Climate_Risk_Management" selected="True" />
-            <SelectField field="E_1_7_0_GHG_Reduction_Programme" selected="True" />
-            <SelectField field="E_1_7_1_Green_Logistics_Programmes" selected="True" />
-            <SelectField field="E_1_8_Renewable_Energy_Programmes" selected="True" />
-            <SelectField field="E_1_9_Carbon_Intensity" selected="True" />
-            <SelectField field="E_2_1_Green_Procurement_Policy" selected="True" />
-            <SelectField field="E_2_1_1_Supplier_Environmental_Programmes" selected="True" />
-            <SelectField field="E_2_1_2_Supplier_Environmental_Certifications" selected="True" />
-            <SelectField field="E_2_1_3_Sustainable_Agriculture_Programmes" selected="True" />
-            <SelectField field="E_2_1_5_Food___Beverage_Sustainability_Initiatives" selected="True" />
-            <SelectField field="E_2_1_6_Green_Outsourced_Logistics_Programmes" selected="True" />
-            <SelectField field="E_2_1_7_Recycled_Material_Use" selected="True" />
-            <SelectField field="E_2_1_8_FSC_Certified_Sourcing" selected="True" />
-            <SelectField field="E_2_1_9_Sustainable_Food_Programmes" selected="True" />
-            <SelectField field="E_2_1_11_Shipbreaking_Programme" selected="True" />
-            <SelectField field="E_3_1_1_Sustainable_Products___Services" selected="True" />
-            <SelectField field="E_3_1_3_Fleet_Emissions" selected="True" />
-            <SelectField field="E_3_1_4_Fleet_Emissions_Trend" selected="True" />
-            <SelectField field="E_3_1_5_Sustainable_Mobility_Products" selected="True" />
-            <SelectField field="E_3_1_6_Eco_Design" selected="True" />
-            <SelectField field="E_3_1_7_Product_Stewardship_Programmes" selected="True" />
-            <SelectField field="E_3_1_8_Organic_Products" selected="True" />
-            <SelectField field="E_3_1_9_GMO_Policy" selected="True" />
-            <SelectField field="E_3_1_10_Credit___Loan_Standards" selected="True" />
-            <SelectField field="E_3_1_11_Responsible_Asset_Management" selected="True" />
-            <SelectField field="E_3_1_12_Real_Estate_LCA" selected="True" />
-            <SelectField field="E_3_1_13_Green_Buildings_Investments" selected="True" />
-            <SelectField field="E_3_1_14_Share_of_Green_Buildings" selected="True" />
-            <SelectField field="E_3_1_15_Sustainable_Financial_Initiatives" selected="True" />
-            <SelectField field="E_3_1_16_Hazardous_Products" selected="True" />
-            <SelectField field="E_3_1_17_Carbon_Intensity_of_Generation" selected="True" />
-            <SelectField field="E_3_1_18_Transmission_Loss_Rate" selected="True" />
-            <SelectField field="E_3_1_19_Hazardous_Substances_Management" selected="True" />
-            <SelectField field="E_3_1_20_Fleet_Age" selected="True" />
-            <SelectField field="E_3_1_21_Carbon_Intensity_Trend_of_Generation" selected="True" />
-            <SelectField field="G_1_1_Bribery___Corruption_Policy" selected="True" />
-            <SelectField field="G_1_1_1_Bribery___Corruption_Programmes" selected="True" />
-            <SelectField field="G_1_2_Whistleblower_Programmes" selected="True" />
-            <SelectField field="G_1_2_1_Business_Ethics_Programme" selected="True" />
-            <SelectField field="G_1_3_Global_Compact_Signatory" selected="True" />
-            <SelectField field="G_1_3_1_PRI_Signatory" selected="True" />
-            <SelectField field="G_1_3_2_Responsible_Investment_Policy" selected="True" />
-            <SelectField field="G_1_3_3_UNEPFI_Signatory" selected="True" />
-            <SelectField field="G_1_3_4_Green_Building_Memberships" selected="True" />
-            <SelectField field="G_1_3_5_Equator_Principles_Signatory" selected="True" />
-            <SelectField field="G_1_3_6_Responsible_Investment_Programme" selected="True" />
-            <SelectField field="G_1_3_7_Corporate_Finance___ESG_Integration" selected="True" />
-            <SelectField field="G_1_3_8_Responsible_Product_Offering" selected="True" />
-            <SelectField field="G_1_3_9_Underwriting_Standards" selected="True" />
-            <SelectField field="G_1_4_1_Money_Laundering_Policy" selected="True" />
-            <SelectField field="G_1_4_2_Compliance_Programme" selected="True" />
-            <SelectField field="G_1_4_3_Animal_Testing_Policy" selected="True" />
-            <SelectField field="G_1_4_3_1_Animal_Testing_Programme" selected="True" />
-            <SelectField field="G_1_4_4_Animal_Welfare_Policy" selected="True" />
-            <SelectField field="G_1_4_4_1_Animal_Welfare_Programme" selected="True" />
-            <SelectField field="G_1_4_5_Policy_on_Emerging_Technologies" selected="True" />
-            <SelectField field="G_1_4_6_Clinical_Trial_Standards" selected="True" />
-            <SelectField field="G_1_4_7_Clinical_Trial_Programme" selected="True" />
-            <SelectField field="G_2_1_ESG_Reporting_Standards" selected="True" />
-            <SelectField field="G_2_2_Verification_of_ESG_Reporting" selected="True" />
-            <SelectField field="G_2_5_ESG_Governance" selected="True" />
-            <SelectField field="G_3_1_Political_Involvement_Policy" selected="True" />
-            <SelectField field="G_3_2_Lobbying_and_Political_Expenses" selected="True" />
-            <SelectField field="G_3_3_1_Transparency_on_Government_Payments" selected="True" />
-            <SelectField field="S_1_1_Freedom_of_Association_Policy" selected="True" />
-            <SelectField field="S_1_1_1_Working_Hours_Policy" selected="True" />
-            <SelectField field="S_1_2_Discrimination_Policy" selected="True" />
-            <SelectField field="S_1_3_Diversity_Programmes" selected="True" />
-            <SelectField field="S_1_3_1_Gender_Pay_Equality_Programme" selected="True" />
-            <SelectField field="S_1_3_2_Gender_Pay_Disclosure" selected="True" />
-            <SelectField field="S_1_4_Collective_Bargaining_Agreements" selected="True" />
-            <SelectField field="S_1_5_Employee_Turnover_Rate" selected="True" />
-            <SelectField field="S_1_5_1_Percentage_of_Temporary_Workers" selected="True" />
-            <SelectField field="S_1_5_2_Human_Capital_Development" selected="True" />
-            <SelectField field="S_1_6_1_Employee_Training" selected="True" />
-            <SelectField field="S_1_6_2_1_Health_and_Safety_Management_System" selected="True" />
-            <SelectField field="S_1_6_3_HIV_Aids_Programmes" selected="True" />
-            <SelectField field="S_1_6_4_Health___Safety_Certifications" selected="True" />
-            <SelectField field="S_1_6_5_LTIR_Trend" selected="True" />
-            <SelectField field="S_1_6_6_Employee_Fatality_Rate" selected="True" />
-            <SelectField field="S_2_1_Scope_of_Social_Supplier_Standards" selected="True" />
-            <SelectField field="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" selected="True" />
-            <SelectField field="S_2_1_3_Conflict_Minerals_Policy" selected="True" />
-            <SelectField field="S_2_1_3_1_Conflict_Minerals_Programmes" selected="True" />
-            <SelectField field="S_2_2_2_1_Supply_Chain_Management" selected="True" />
-            <SelectField field="S_2_2_3_Social_Supplier_Certification" selected="True" />
-            <SelectField field="S_2_2_4_Fair_Trade_Products" selected="True" />
-            <SelectField field="S_2_2_5_Contractor_Safety_Programme" selected="True" />
-            <SelectField field="S_2_2_6_Contractor_Fatalities" selected="True" />
-            <SelectField field="S_3_1_1_Responsible_Marketing_Policy" selected="True" />
-            <SelectField field="S_3_1_2_Advertising_Ethics_Policy" selected="True" />
-            <SelectField field="S_3_1_3_Data_Privacy___Security_Policy" selected="True" />
-            <SelectField field="S_3_1_3_1_Data_Privacy_Programme" selected="True" />
-            <SelectField field="S_3_1_3_2_Data_Request_Management" selected="True" />
-            <SelectField field="S_3_1_3_3_Cybersecurity_Programme" selected="True" />
-            <SelectField field="S_3_1_4_Electromagnetic_Safety_Programmes" selected="True" />
-            <SelectField field="S_3_1_6_Editorial_Guidelines" selected="True" />
-            <SelectField field="S_3_1_6_1_Media_Ethics_Programme" selected="True" />
-            <SelectField field="S_3_1_8_Service_Delays" selected="True" />
-            <SelectField field="S_3_1_9_Product_Health_Statement" selected="True" />
-            <SelectField field="S_3_1_9_1_Product_and_Service_Safety_Programme" selected="True" />
-            <SelectField field="S_3_1_10_Occupier_Satisfaction_Surveys" selected="True" />
-            <SelectField field="S_3_1_11_Customer_Eco_Efficiency_Programmes" selected="True" />
-            <SelectField field="S_3_1_12_Drug_Promotion_Standards" selected="True" />
-            <SelectField field="S_3_1_13_Ethical_Marketing_Promotion" selected="True" />
-            <SelectField field="S_3_1_14_Responsible_Gaming_Programme" selected="True" />
-            <SelectField field="S_3_1_15_Value_Based_Health_Care_Programme" selected="True" />
-            <SelectField field="S_3_1_16_Nutrition_and_Health_Programme" selected="True" />
-            <SelectField field="S_3_1_17_Asset_Integrity_Management" selected="True" />
-            <SelectField field="S_3_2_1_QMS_Certifications" selected="True" />
-            <SelectField field="S_3_2_2_Trial_Data_Transparency" selected="True" />
-            <SelectField field="S_3_2_3_U_S__Drug_Price_Transparency" selected="True" />
-            <SelectField field="S_4_2_1_Human_Rights_Policy" selected="True" />
-            <SelectField field="S_4_2_1_2_Human_Rights_Programme" selected="True" />
-            <SelectField field="S_4_2_2_Community_Involvement_Programmes" selected="True" />
-            <SelectField field="S_4_2_3_Financial_Inclusion" selected="True" />
-            <SelectField field="S_4_2_4_Access_to_Medicine_Programme" selected="True" />
-            <SelectField field="S_4_2_5_Neglected_Diseases_R_D" selected="True" />
-            <SelectField field="S_4_2_6_Equitable_Pricing_and_Availability" selected="True" />
-            <SelectField field="S_4_2_6_1_Intellectual_Property_Access" selected="True" />
-            <SelectField field="S_4_2_7_Access_to_Health_Care" selected="True" />
-            <SelectField field="S_4_2_9_Indigenous_Rights_Policy" selected="True" />
-            <SelectField field="S_4_2_10_Access_to_Basic_Services" selected="True" />
-            <SelectField field="S_4_2_11_Community_Development_Programmes" selected="True" />
-            <SelectField field="S_4_2_15_Noise_Management" selected="True" />
-            <SelectField field="S_4_4_1_Systemic_Risk_Management" selected="True" />
-            <SelectField field="S_4_4_2_Systemic_Risk_Reporting" selected="True" />
-            <SelectField field="S_4_4_3_Tier_1_Capital_Buffer" selected="True" />
-            <SelectField field="S_4_4_5_Leverage_Ratio" selected="True" />
-            <SelectField field="S_4_4_8_Asset_Quality" selected="True" />
-            <SelectField field="DFF" selected="True" rename="INT_RATE" />
-            <SelectField field="DEXUSEU" selected="True" rename="EX_RATE" />
-            <SelectField field="Mkt-RF" selected="False" />
-            <SelectField field="SMB" selected="False" />
-            <SelectField field="HML" selected="False" />
-            <SelectField field="RF" selected="False" />
-            <SelectField field="Mom" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -525,7 +513,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1362" y="242" />
+        <Position x="1446" y="54.00002" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -552,7 +540,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="1194" y="402" />
+        <Position x="1266" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -743,7 +731,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="1542" y="402" />
+        <Position x="1590" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -765,9 +753,6 @@ Date - Descending</DefaultAnnotationText>
           <DefaultAnnotationText>Market Indicators 20201024.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="DATE" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
@@ -785,7 +770,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="25">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1554" y="282" />
+        <Position x="1578" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -822,7 +807,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="1278" y="402" />
+        <Position x="1350" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -842,7 +827,7 @@ Custom</DefaultAnnotationText>
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1650" y="282" />
+        <Position x="1674" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -861,7 +846,7 @@ Custom</DefaultAnnotationText>
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1398" y="402" />
+        <Position x="1470" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -882,7 +867,7 @@ DateTimeTrim([DateTime_Out],'month')
     </Node>
     <Node ToolID="30">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1746" y="294" />
+        <Position x="1806" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -915,7 +900,7 @@ DateTimeTrim([DateTime_Out],'month')
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="1650" y="402" />
+        <Position x="1698" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -935,7 +920,7 @@ yyyy-MM-dd</DefaultAnnotationText>
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1842" y="294" />
+        <Position x="1902" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -952,14 +937,14 @@ yyyy-MM-dd</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
     </Node>
-    <Node ToolID="33">
+    <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="1662" y="534" />
+        <Position x="1266" y="486" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Passwords />
-          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv</File>
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv</File>
           <FormatSpecificOptions>
             <CodePage>28591</CodePage>
             <Delimeter>,</Delimeter>
@@ -973,34 +958,194 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Prices_*.csv</DefaultAnnotationText>
+          <DefaultAnnotationText>Prices.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Date" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Open" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="High" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Low" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Adj Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Volume" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
-            <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices\Prices_*.csv" type="V_String" />
+            <Field name="Date" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Open" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="High" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Low" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Adj Close" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Volume" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
+            <Field name="Ticker" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Prices.csv" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
-    <Node ToolID="22">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1578" y="54" width="164.2804" height="19" />
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1338" y="486" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Caption>Profile Null Values</Caption>
+          <IsFrom value="False" />
+          <InputFieldName>Date</InputFieldName>
+          <Format>yyyy-MM-dd</Format>
+          <OutputFieldName>DateTime_Out</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Date From:
+yyyy-MM-dd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2274" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Ticker" />
+            <Field field="Date" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Ticker" />
+            <Field field="DateTime_Out" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Date" selected="False" rename="Right_Date" input="Right_" />
+                <SelectField field="Right_Open" selected="False" input="Right_" />
+                <SelectField field="Right_Close" selected="False" input="Right_" />
+                <SelectField field="Right_Adj Close" selected="False" input="Right_" />
+                <SelectField field="Right_Volume" selected="False" rename="Right_Volume" input="Right_" />
+                <SelectField field="Right_Ticker" selected="False" rename="Right_Ticker" input="Right_" />
+                <SelectField field="Right_DateTime_Out" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="2370" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2658" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\bbeals\Desktop\Thesis Data\Data.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2658" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="DATE" action="GroupBy" rename="DATE" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2466" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Date] &gt;= "2018-11-01"
+AND
+[Date] &lt; "2020-03-01"</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>
+            </Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-11-11 20:29:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-11-11 20:29:28</StartDate>
+              <EndDate>2020-11-11 20:29:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Date] &gt;= "2018-11-01"
+AND
+[Date] &lt; "2020-03-01"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1433" y="442" width="608" height="173" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Returns</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="True" />
-          <Folded value="True" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -1009,15 +1154,67 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="20">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
-            <Position x="1626" y="102" />
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1458" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Limit_UniqueCount>10000</Limit_UniqueCount>
-              <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
-              <IsMetric value="False" />
+              <SortInfo locale="0">
+                <Field field="Ticker" order="Ascending" />
+                <Field field="DateTime_Out" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Ticker - Ascending
+DateTime_Out - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1602" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>Return_1D_AdjClose</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Row+1:Adj Close]-[Adj Close]</Expression>
+              <GroupByFields />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Row+1:Adj Close]-[Adj Close]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1530" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Open" selected="True" type="Float" size="4" />
+                <SelectField field="High" selected="True" type="Float" size="4" />
+                <SelectField field="Low" selected="True" type="Float" size="4" />
+                <SelectField field="Close" selected="True" type="Float" size="4" />
+                <SelectField field="Adj Close" selected="True" type="Float" size="4" />
+                <SelectField field="Volume" selected="True" type="Int32" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
@@ -1025,45 +1222,91 @@ yyyy-MM-dd</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
-        <Node ToolID="21">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="1722" y="102" />
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1710" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Expression>[Name] = "Nulls"</Expression>
-              <Mode>Simple</Mode>
-              <Simple>
-                <Operator>=</Operator>
-                <Field>Name</Field>
-                <Operands>
-                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-                  <DateType>fixed</DateType>
-                  <PeriodDate>2020-10-11 17:00:23</PeriodDate>
-                  <PeriodType>
-                  </PeriodType>
-                  <PeriodCount>0</PeriodCount>
-                  <Operand>Nulls</Operand>
-                  <StartDate>2020-10-11 17:00:23</StartDate>
-                  <EndDate>2020-10-11 17:00:23</EndDate>
-                </Operands>
-              </Simple>
+              <UpdateField value="False" />
+              <UpdateField_Name>Date</UpdateField_Name>
+              <CreateField_Name>Return_1D_Close</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Row+1:Close]-[Close]</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[Name] = "Nulls"</DefaultAnnotationText>
+              <DefaultAnnotationText>[Row+1:Close]-[Close]</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1806" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>Return_30D_AdjClose</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="30" />
+              <Expression>[Row+30:Adj Close]-[Adj Close]</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Row+30:Adj Close]-[Adj Close]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1926" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Date</UpdateField_Name>
+              <CreateField_Name>Return_30D_Close</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="30" />
+              <Expression>[Row+30:Close]-[Close]</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Row+30:Close]-[Close]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
         </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="473" y="197.9999" width="753" height="173.0001" />
+        <Position x="474" y="65.99998" width="752" height="173" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1081,7 +1324,7 @@ yyyy-MM-dd</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="5">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="498" y="241.9999" />
+            <Position x="499" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1111,7 +1354,7 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Node>
         <Node ToolID="9">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="606" y="242" />
+            <Position x="607" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1140,7 +1383,7 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="714" y="242" />
+            <Position x="715" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1170,7 +1413,7 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Node>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="822" y="242" />
+            <Position x="823" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1199,7 +1442,7 @@ yyyy-MM-dd</DefaultAnnotationText>
         </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="930" y="242" />
+            <Position x="931" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1220,7 +1463,7 @@ CloseP...</DefaultAnnotationText>
         </Node>
         <Node ToolID="13">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1038" y="242" />
+            <Position x="1038" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1247,7 +1490,7 @@ CloseP...</DefaultAnnotationText>
         </Node>
         <Node ToolID="14">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1122" y="242" />
+            <Position x="1122" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1278,10 +1521,6 @@ CloseP...</DefaultAnnotationText>
   <Connections>
     <Connection>
       <Origin ToolID="1" Connection="Output" />
-      <Destination ToolID="2" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="2" Connection="Output" />
       <Destination ToolID="6" Connection="Input" />
     </Connection>
     <Connection>
@@ -1296,9 +1535,13 @@ CloseP...</DefaultAnnotationText>
       <Origin ToolID="16" Connection="Output" />
       <Destination ToolID="18" Connection="Input" />
     </Connection>
-    <Connection Wireless="True">
+    <Connection>
       <Origin ToolID="17" Connection="Output" />
-      <Destination ToolID="20" Connection="Input" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="18" Connection="Output" />
@@ -1346,11 +1589,55 @@ CloseP...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="42" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="42" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="42" Connection="Join" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="42" Connection="Left" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="True" />
       <Destination ToolID="17" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="20" Connection="Output" />
-      <Destination ToolID="21" Connection="Input" />
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="Output" />

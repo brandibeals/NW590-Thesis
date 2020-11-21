@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 31 2020
+Created on Fri Oct 30 2020
 Author: Brandi Beals
 Description: Thesis Data Preparation
 """
@@ -9,58 +9,71 @@ Description: Thesis Data Preparation
 # IMPORT PACKAGES
 ######################################
 
-import os
-import pypyodbc
 import pandas as pd
+from matplotlib import pyplot
+from sklearn.preprocessing import MinMaxScaler
+
+######################################
+# LOAD DATA
+######################################
+
+data = pd.read_csv(r'C:\Users\bbeals\Desktop\Thesis Data\Data.csv')
+#X = data.values #convert dataframe to series
+
+######################################
+# PREPARE DATA
+######################################
+
+features = data.loc[:,'BETA_ACWI':]
+features = features.drop(['MM FORMULA'], axis=1)
+
+return_1D_adjclose = data.loc[:,['Return_1D_AdjClose']]
+return_1D_close = data.loc[:,['Return_1D_Close']]
+return_30D_adjclose = data.loc[:,['Return_30D_AdjClose']]
+return_30D_close = data.loc[:,['Return_30D_Close']]
 
 ######################################
 # DEFIINITIONS
 ######################################
 
-os.chdir(r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\NW590-Thesis')
-
-sql = """SELECT TOP (1000) *
-  FROM edm.ConsensusEstimatesAnnualFactset f
-  JOIN edm.ConstituentList ON ConstituentList.edmSecurityId = f.edmSecurityId
-  JOIN edm.InvestmentTeam ON InvestmentTeam.id = ConstituentList.investmentTeamId
-  JOIN edm.SecurityReference ON SecurityReference.edmSecurityId = ConstituentList.edmSecurityId
-  JOIN edm.SecurityType ON SecurityType.id = SecurityReference.securityTypeId
-  WHERE InvestmentTeamCode='GRW'
-  AND effectiveDate>'3-31-2020'
-  AND SecurityType.code='COM'
-  AND f.edmSecurityId='70001937'
-  ORDER BY effectiveDate, f.edmSecurityId DESC"""
+returns = return_1D_close
+train_size = len(data) * 0.60
+validation_size = len(data) * 0.20
+test_size = len(data) * 0.20
 
 ######################################
-# GET DATA
+# SPLIT DATA
 ######################################
 
-connection = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
-                            "Server=milsql02;"
-                            "Database=ArtisanApplication;"
-                            "Trusted_Connection=yes;")
-df = pd.read_sql_query(sql, connection)
-df.head()
+x_train = features.loc[0:train_size-1,:]
+y_train = returns.loc[0:train_size-1,:]
+x_validation = features.loc[train_size:train_size+validation_size-1,:]
+y_validation = returns.loc[train_size:train_size+validation_size-1,:]
+x_test = features.loc[train_size+validation_size:len(data),:]
+y_test = returns.loc[train_size+validation_size:len(data),:]
+
+pyplot.title('How are the observations split?')
+pyplot.plot(y_train, color='black')
+pyplot.plot(y_validation, color='tab:blue')
+pyplot.plot(y_test, color='tab:gray')
+pyplot.legend(['Training Set', 'Validation Set', 'Testing Set'])
+pyplot.show()
+
+######################################
+# NORMALIZATION/SCALING
+######################################
+
+scaler = MinMaxScaler(feature_range=(0, 1))
+
+x_train = scaler.fit_transform(x_train)
+y_train = scaler.fit_transform(y_train)
+x_validation = scaler.fit_transform(x_validation)
+y_validation = scaler.fit_transform(y_validation)
+x_test = scaler.fit_transform(x_test)
+y_test = scaler.fit_transform(y_test)
+
+######################################
+# DIMENSIONALITY REDUCTION
+######################################
 
 
-esg = pd.read_csv(r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Sustainalytics ESG Details_04082020.csv', encoding='cp1252')
-esg.head(10)
-esg.describe()
-esg.dtypes
-
-
-
-
-#def getdata(sql):
-#    connection = pypyodbc.connect("Driver={SQL Server Native Client 11.0};"
-#                            "Server=milsql02;"
-#                            "Database=ArtisanApplication;"
-#                            "Trusted_Connection=yes;")
-#    df = pd.read_sql_query(sql, connection)
-#    df.head()
-#
-#def main():
-#    getdata(sql)
-#
-#if __name__ == "__main__":
-#    main()

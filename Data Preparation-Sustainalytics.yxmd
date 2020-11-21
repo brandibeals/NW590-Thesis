@@ -8417,9 +8417,6 @@
           <DefaultAnnotationText>HD_Ref_Data_L1_20201007.txt</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="ExtractionDate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\HD_Ref_Data_L1_20201007.txt" type="V_String" />
@@ -8586,9 +8583,6 @@ AND
           <DefaultAnnotationText>ESGRR_Indicators_20201007.txt</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="EntityId" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
@@ -8815,7 +8809,7 @@ FieldName = R...</DefaultAnnotationText>
           <HeaderField field="FieldName" />
           <DataField field="FieldValue" />
           <Methods>
-            <Method method="Concat" />
+            <Method method="First" />
             <Separator>,</Separator>
             <FieldSize value="2048" />
           </Methods>
@@ -8827,166 +8821,166 @@ FieldName = R...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Date" size="254" source="CrossTab:Group:Concat:" type="V_WString" />
-            <Field name="Ticker" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
-            <Field name="E_1_1_Environmental_Policy" size="2048" source="CrossTab:Header:FieldName:E.1.1 Environmental Policy:Concat:" type="V_WString" />
-            <Field name="E_1_10_Carbon_Intensity_Trend" size="2048" source="CrossTab:Header:FieldName:E.1.10 Carbon Intensity Trend:Concat:" type="V_WString" />
-            <Field name="E_1_11_Renewable_Energy_Use" size="2048" source="CrossTab:Header:FieldName:E.1.11 Renewable Energy Use:Concat:" type="V_WString" />
-            <Field name="E_1_2_Environmental_Management_System" size="2048" source="CrossTab:Header:FieldName:E.1.2 Environmental Management System:Concat:" type="V_WString" />
-            <Field name="E_1_2_1_Biodiversity_Programmes" size="2048" source="CrossTab:Header:FieldName:E.1.2.1 Biodiversity Programmes:Concat:" type="V_WString" />
-            <Field name="E_1_2_2_Site_Closure___Rehabilitation" size="2048" source="CrossTab:Header:FieldName:E.1.2.2 Site Closure &amp; Rehabilitation:Concat:" type="V_WString" />
-            <Field name="E_1_2_4_Oil_Spill_Disclosure___Performance" size="2048" source="CrossTab:Header:FieldName:E.1.2.4 Oil Spill Disclosure &amp; Performance:Concat:" type="V_WString" />
-            <Field name="E_1_2_5_Cyanide_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.5 Cyanide Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_6_1_Solid_Waste_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.6.1 Solid Waste Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_6_2_Mineral_Waste_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.6.2 Mineral Waste Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_6_3_Effluent_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.6.3 Effluent Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_6_4_Offshore_Well_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.6.4 Offshore Well Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_6_5_Radioactive_Waste_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.6.5 Radioactive Waste Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_7_Water_Intensity" size="2048" source="CrossTab:Header:FieldName:E.1.2.7 Water Intensity:Concat:" type="V_WString" />
-            <Field name="E_1_2_7_1_Water_Risk_Management" size="2048" source="CrossTab:Header:FieldName:E.1.2.7.1 Water Risk Management:Concat:" type="V_WString" />
-            <Field name="E_1_2_7_2_Water_Intensity_Trend" size="2048" source="CrossTab:Header:FieldName:E.1.2.7.2 Water Intensity Trend:Concat:" type="V_WString" />
-            <Field name="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" size="2048" source="CrossTab:Header:FieldName:E.1.2.7.3 Fresh Water Intensity for Generators:Concat:" type="V_WString" />
-            <Field name="E_1_2_8_Forest_Certifications" size="2048" source="CrossTab:Header:FieldName:E.1.2.8 Forest Certifications:Concat:" type="V_WString" />
-            <Field name="E_1_2_9_Deforestation_Policy" size="2048" source="CrossTab:Header:FieldName:E.1.2.9 Deforestation Policy:Concat:" type="V_WString" />
-            <Field name="E_1_2_10_Deforestation_Programme" size="2048" source="CrossTab:Header:FieldName:E.1.2.10 Deforestation Programme:Concat:" type="V_WString" />
-            <Field name="E_1_3_EMS_Certification" size="2048" source="CrossTab:Header:FieldName:E.1.3 EMS Certification:Concat:" type="V_WString" />
-            <Field name="E_1_3_1_Emergency_Response_Programme" size="2048" source="CrossTab:Header:FieldName:E.1.3.1 Emergency Response Programme:Concat:" type="V_WString" />
-            <Field name="E_1_3_2_Hazardous_Waste_Management" size="2048" source="CrossTab:Header:FieldName:E.1.3.2 Hazardous Waste Management:Concat:" type="V_WString" />
-            <Field name="E_1_3_3_Non_GHG_Air_Emissions_Programmes" size="2048" source="CrossTab:Header:FieldName:E.1.3.3 Non-GHG Air Emissions Programmes:Concat:" type="V_WString" />
-            <Field name="E_1_3_4_Water_Management_Programmes" size="2048" source="CrossTab:Header:FieldName:E.1.3.4 Water Management Programmes:Concat:" type="V_WString" />
-            <Field name="E_1_3_6_Tailings_Management_and_Standards" size="2048" source="CrossTab:Header:FieldName:E.1.3.6 Tailings Management and Standards:Concat:" type="V_WString" />
-            <Field name="E_1_6_Scope_of_GHG_Reporting" size="2048" source="CrossTab:Header:FieldName:E.1.6 Scope of GHG Reporting:Concat:" type="V_WString" />
-            <Field name="E_1_6_1_GHG_Risk_Management" size="2048" source="CrossTab:Header:FieldName:E.1.6.1 GHG Risk Management:Concat:" type="V_WString" />
-            <Field name="E_1_6_2_Physical_Climate_Risk_Management" size="2048" source="CrossTab:Header:FieldName:E.1.6.2 Physical Climate Risk Management:Concat:" type="V_WString" />
-            <Field name="E_1_7_0_GHG_Reduction_Programme" size="2048" source="CrossTab:Header:FieldName:E.1.7.0 GHG Reduction Programme:Concat:" type="V_WString" />
-            <Field name="E_1_7_1_Green_Logistics_Programmes" size="2048" source="CrossTab:Header:FieldName:E.1.7.1 Green Logistics Programmes:Concat:" type="V_WString" />
-            <Field name="E_1_8_Renewable_Energy_Programmes" size="2048" source="CrossTab:Header:FieldName:E.1.8 Renewable Energy Programmes:Concat:" type="V_WString" />
-            <Field name="E_1_9_Carbon_Intensity" size="2048" source="CrossTab:Header:FieldName:E.1.9 Carbon Intensity:Concat:" type="V_WString" />
-            <Field name="E_2_1_Green_Procurement_Policy" size="2048" source="CrossTab:Header:FieldName:E.2.1 Green Procurement Policy:Concat:" type="V_WString" />
-            <Field name="E_2_1_1_Supplier_Environmental_Programmes" size="2048" source="CrossTab:Header:FieldName:E.2.1.1 Supplier Environmental Programmes:Concat:" type="V_WString" />
-            <Field name="E_2_1_2_Supplier_Environmental_Certifications" size="2048" source="CrossTab:Header:FieldName:E.2.1.2 Supplier Environmental Certifications:Concat:" type="V_WString" />
-            <Field name="E_2_1_3_Sustainable_Agriculture_Programmes" size="2048" source="CrossTab:Header:FieldName:E.2.1.3 Sustainable Agriculture Programmes:Concat:" type="V_WString" />
-            <Field name="E_2_1_5_Food___Beverage_Sustainability_Initiatives" size="2048" source="CrossTab:Header:FieldName:E.2.1.5 Food &amp; Beverage Sustainability Initiatives:Concat:" type="V_WString" />
-            <Field name="E_2_1_6_Green_Outsourced_Logistics_Programmes" size="2048" source="CrossTab:Header:FieldName:E.2.1.6 Green Outsourced Logistics Programmes:Concat:" type="V_WString" />
-            <Field name="E_2_1_7_Recycled_Material_Use" size="2048" source="CrossTab:Header:FieldName:E.2.1.7 Recycled Material Use:Concat:" type="V_WString" />
-            <Field name="E_2_1_8_FSC_Certified_Sourcing" size="2048" source="CrossTab:Header:FieldName:E.2.1.8 FSC Certified Sourcing:Concat:" type="V_WString" />
-            <Field name="E_2_1_9_Sustainable_Food_Programmes" size="2048" source="CrossTab:Header:FieldName:E.2.1.9 Sustainable Food Programmes:Concat:" type="V_WString" />
-            <Field name="E_2_1_11_Shipbreaking_Programme" size="2048" source="CrossTab:Header:FieldName:E.2.1.11 Shipbreaking Programme:Concat:" type="V_WString" />
-            <Field name="E_3_1_1_Sustainable_Products___Services" size="2048" source="CrossTab:Header:FieldName:E.3.1.1 Sustainable Products &amp; Services:Concat:" type="V_WString" />
-            <Field name="E_3_1_3_Fleet_Emissions" size="2048" source="CrossTab:Header:FieldName:E.3.1.3 Fleet Emissions:Concat:" type="V_WString" />
-            <Field name="E_3_1_4_Fleet_Emissions_Trend" size="2048" source="CrossTab:Header:FieldName:E.3.1.4 Fleet Emissions Trend:Concat:" type="V_WString" />
-            <Field name="E_3_1_5_Sustainable_Mobility_Products" size="2048" source="CrossTab:Header:FieldName:E.3.1.5 Sustainable Mobility Products:Concat:" type="V_WString" />
-            <Field name="E_3_1_6_Eco_Design" size="2048" source="CrossTab:Header:FieldName:E.3.1.6 Eco-Design:Concat:" type="V_WString" />
-            <Field name="E_3_1_7_Product_Stewardship_Programmes" size="2048" source="CrossTab:Header:FieldName:E.3.1.7 Product Stewardship Programmes:Concat:" type="V_WString" />
-            <Field name="E_3_1_8_Organic_Products" size="2048" source="CrossTab:Header:FieldName:E.3.1.8 Organic Products:Concat:" type="V_WString" />
-            <Field name="E_3_1_9_GMO_Policy" size="2048" source="CrossTab:Header:FieldName:E.3.1.9 GMO Policy:Concat:" type="V_WString" />
-            <Field name="E_3_1_10_Credit___Loan_Standards" size="2048" source="CrossTab:Header:FieldName:E.3.1.10 Credit &amp; Loan Standards:Concat:" type="V_WString" />
-            <Field name="E_3_1_11_Responsible_Asset_Management" size="2048" source="CrossTab:Header:FieldName:E.3.1.11 Responsible Asset Management:Concat:" type="V_WString" />
-            <Field name="E_3_1_12_Real_Estate_LCA" size="2048" source="CrossTab:Header:FieldName:E.3.1.12 Real Estate LCA:Concat:" type="V_WString" />
-            <Field name="E_3_1_13_Green_Buildings_Investments" size="2048" source="CrossTab:Header:FieldName:E.3.1.13 Green Buildings Investments:Concat:" type="V_WString" />
-            <Field name="E_3_1_14_Share_of_Green_Buildings" size="2048" source="CrossTab:Header:FieldName:E.3.1.14 Share of Green Buildings:Concat:" type="V_WString" />
-            <Field name="E_3_1_15_Sustainable_Financial_Initiatives" size="2048" source="CrossTab:Header:FieldName:E.3.1.15 Sustainable Financial Initiatives:Concat:" type="V_WString" />
-            <Field name="E_3_1_16_Hazardous_Products" size="2048" source="CrossTab:Header:FieldName:E.3.1.16 Hazardous Products:Concat:" type="V_WString" />
-            <Field name="E_3_1_17_Carbon_Intensity_of_Generation" size="2048" source="CrossTab:Header:FieldName:E.3.1.17 Carbon Intensity of Generation:Concat:" type="V_WString" />
-            <Field name="E_3_1_18_Transmission_Loss_Rate" size="2048" source="CrossTab:Header:FieldName:E.3.1.18 Transmission Loss Rate:Concat:" type="V_WString" />
-            <Field name="E_3_1_19_Hazardous_Substances_Management" size="2048" source="CrossTab:Header:FieldName:E.3.1.19 Hazardous Substances Management:Concat:" type="V_WString" />
-            <Field name="E_3_1_20_Fleet_Age" size="2048" source="CrossTab:Header:FieldName:E.3.1.20 Fleet Age:Concat:" type="V_WString" />
-            <Field name="E_3_1_21_Carbon_Intensity_Trend_of_Generation" size="2048" source="CrossTab:Header:FieldName:E.3.1.21 Carbon Intensity Trend of Generation:Concat:" type="V_WString" />
-            <Field name="G_1_1_Bribery___Corruption_Policy" size="2048" source="CrossTab:Header:FieldName:G.1.1 Bribery &amp; Corruption Policy:Concat:" type="V_WString" />
-            <Field name="G_1_1_1_Bribery___Corruption_Programmes" size="2048" source="CrossTab:Header:FieldName:G.1.1.1 Bribery &amp; Corruption Programmes:Concat:" type="V_WString" />
-            <Field name="G_1_2_Whistleblower_Programmes" size="2048" source="CrossTab:Header:FieldName:G.1.2 Whistleblower Programmes:Concat:" type="V_WString" />
-            <Field name="G_1_2_1_Business_Ethics_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.2.1 Business Ethics Programme:Concat:" type="V_WString" />
-            <Field name="G_1_3_Global_Compact_Signatory" size="2048" source="CrossTab:Header:FieldName:G.1.3 Global Compact Signatory:Concat:" type="V_WString" />
-            <Field name="G_1_3_1_PRI_Signatory" size="2048" source="CrossTab:Header:FieldName:G.1.3.1 PRI Signatory:Concat:" type="V_WString" />
-            <Field name="G_1_3_2_Responsible_Investment_Policy" size="2048" source="CrossTab:Header:FieldName:G.1.3.2 Responsible Investment Policy:Concat:" type="V_WString" />
-            <Field name="G_1_3_3_UNEPFI_Signatory" size="2048" source="CrossTab:Header:FieldName:G.1.3.3 UNEPFI Signatory:Concat:" type="V_WString" />
-            <Field name="G_1_3_4_Green_Building_Memberships" size="2048" source="CrossTab:Header:FieldName:G.1.3.4 Green Building Memberships:Concat:" type="V_WString" />
-            <Field name="G_1_3_5_Equator_Principles_Signatory" size="2048" source="CrossTab:Header:FieldName:G.1.3.5 Equator Principles Signatory:Concat:" type="V_WString" />
-            <Field name="G_1_3_6_Responsible_Investment_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.3.6 Responsible Investment Programme:Concat:" type="V_WString" />
-            <Field name="G_1_3_7_Corporate_Finance___ESG_Integration" size="2048" source="CrossTab:Header:FieldName:G.1.3.7 Corporate Finance - ESG Integration:Concat:" type="V_WString" />
-            <Field name="G_1_3_8_Responsible_Product_Offering" size="2048" source="CrossTab:Header:FieldName:G.1.3.8 Responsible Product Offering:Concat:" type="V_WString" />
-            <Field name="G_1_3_9_Underwriting_Standards" size="2048" source="CrossTab:Header:FieldName:G.1.3.9 Underwriting Standards:Concat:" type="V_WString" />
-            <Field name="G_1_4_1_Money_Laundering_Policy" size="2048" source="CrossTab:Header:FieldName:G.1.4.1 Money Laundering Policy:Concat:" type="V_WString" />
-            <Field name="G_1_4_2_Compliance_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.4.2 Compliance Programme:Concat:" type="V_WString" />
-            <Field name="G_1_4_3_Animal_Testing_Policy" size="2048" source="CrossTab:Header:FieldName:G.1.4.3 Animal Testing Policy:Concat:" type="V_WString" />
-            <Field name="G_1_4_3_1_Animal_Testing_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.4.3.1 Animal Testing Programme:Concat:" type="V_WString" />
-            <Field name="G_1_4_4_Animal_Welfare_Policy" size="2048" source="CrossTab:Header:FieldName:G.1.4.4 Animal Welfare Policy:Concat:" type="V_WString" />
-            <Field name="G_1_4_4_1_Animal_Welfare_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.4.4.1 Animal Welfare Programme:Concat:" type="V_WString" />
-            <Field name="G_1_4_5_Policy_on_Emerging_Technologies" size="2048" source="CrossTab:Header:FieldName:G.1.4.5 Policy on Emerging Technologies:Concat:" type="V_WString" />
-            <Field name="G_1_4_6_Clinical_Trial_Standards" size="2048" source="CrossTab:Header:FieldName:G.1.4.6 Clinical Trial Standards:Concat:" type="V_WString" />
-            <Field name="G_1_4_7_Clinical_Trial_Programme" size="2048" source="CrossTab:Header:FieldName:G.1.4.7 Clinical Trial Programme:Concat:" type="V_WString" />
-            <Field name="G_2_1_ESG_Reporting_Standards" size="2048" source="CrossTab:Header:FieldName:G.2.1 ESG Reporting Standards:Concat:" type="V_WString" />
-            <Field name="G_2_2_Verification_of_ESG_Reporting" size="2048" source="CrossTab:Header:FieldName:G.2.2 Verification of ESG Reporting:Concat:" type="V_WString" />
-            <Field name="G_2_5_ESG_Governance" size="2048" source="CrossTab:Header:FieldName:G.2.5 ESG Governance:Concat:" type="V_WString" />
-            <Field name="G_3_1_Political_Involvement_Policy" size="2048" source="CrossTab:Header:FieldName:G.3.1 Political Involvement Policy:Concat:" type="V_WString" />
-            <Field name="G_3_2_Lobbying_and_Political_Expenses" size="2048" source="CrossTab:Header:FieldName:G.3.2 Lobbying and Political Expenses:Concat:" type="V_WString" />
-            <Field name="G_3_3_1_Transparency_on_Government_Payments" size="2048" source="CrossTab:Header:FieldName:G.3.3.1 Transparency on Government Payments:Concat:" type="V_WString" />
-            <Field name="S_1_1_Freedom_of_Association_Policy" size="2048" source="CrossTab:Header:FieldName:S.1.1 Freedom of Association Policy:Concat:" type="V_WString" />
-            <Field name="S_1_1_1_Working_Hours_Policy" size="2048" source="CrossTab:Header:FieldName:S.1.1.1 Working Hours Policy:Concat:" type="V_WString" />
-            <Field name="S_1_2_Discrimination_Policy" size="2048" source="CrossTab:Header:FieldName:S.1.2 Discrimination Policy:Concat:" type="V_WString" />
-            <Field name="S_1_3_Diversity_Programmes" size="2048" source="CrossTab:Header:FieldName:S.1.3 Diversity Programmes:Concat:" type="V_WString" />
-            <Field name="S_1_3_1_Gender_Pay_Equality_Programme" size="2048" source="CrossTab:Header:FieldName:S.1.3.1 Gender Pay Equality Programme:Concat:" type="V_WString" />
-            <Field name="S_1_3_2_Gender_Pay_Disclosure" size="2048" source="CrossTab:Header:FieldName:S.1.3.2 Gender Pay Disclosure:Concat:" type="V_WString" />
-            <Field name="S_1_4_Collective_Bargaining_Agreements" size="2048" source="CrossTab:Header:FieldName:S.1.4 Collective Bargaining Agreements:Concat:" type="V_WString" />
-            <Field name="S_1_5_Employee_Turnover_Rate" size="2048" source="CrossTab:Header:FieldName:S.1.5 Employee Turnover Rate:Concat:" type="V_WString" />
-            <Field name="S_1_5_1_Percentage_of_Temporary_Workers" size="2048" source="CrossTab:Header:FieldName:S.1.5.1 Percentage of Temporary Workers:Concat:" type="V_WString" />
-            <Field name="S_1_5_2_Human_Capital_Development" size="2048" source="CrossTab:Header:FieldName:S.1.5.2 Human Capital Development:Concat:" type="V_WString" />
-            <Field name="S_1_6_1_Employee_Training" size="2048" source="CrossTab:Header:FieldName:S.1.6.1 Employee Training:Concat:" type="V_WString" />
-            <Field name="S_1_6_2_1_Health_and_Safety_Management_System" size="2048" source="CrossTab:Header:FieldName:S.1.6.2.1 Health and Safety Management System:Concat:" type="V_WString" />
-            <Field name="S_1_6_3_HIV_Aids_Programmes" size="2048" source="CrossTab:Header:FieldName:S.1.6.3 HIV/Aids Programmes:Concat:" type="V_WString" />
-            <Field name="S_1_6_4_Health___Safety_Certifications" size="2048" source="CrossTab:Header:FieldName:S.1.6.4 Health &amp; Safety Certifications:Concat:" type="V_WString" />
-            <Field name="S_1_6_5_LTIR_Trend" size="2048" source="CrossTab:Header:FieldName:S.1.6.5 LTIR Trend:Concat:" type="V_WString" />
-            <Field name="S_1_6_6_Employee_Fatality_Rate" size="2048" source="CrossTab:Header:FieldName:S.1.6.6 Employee Fatality Rate:Concat:" type="V_WString" />
-            <Field name="S_2_1_Scope_of_Social_Supplier_Standards" size="2048" source="CrossTab:Header:FieldName:S.2.1 Scope of Social Supplier Standards:Concat:" type="V_WString" />
-            <Field name="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" size="2048" source="CrossTab:Header:FieldName:S.2.1.2 Signatory to Responsible Business Alliance (RBA):Concat:" type="V_WString" />
-            <Field name="S_2_1_3_Conflict_Minerals_Policy" size="2048" source="CrossTab:Header:FieldName:S.2.1.3 Conflict Minerals Policy:Concat:" type="V_WString" />
-            <Field name="S_2_1_3_1_Conflict_Minerals_Programmes" size="2048" source="CrossTab:Header:FieldName:S.2.1.3.1 Conflict Minerals Programmes:Concat:" type="V_WString" />
-            <Field name="S_2_2_2_1_Supply_Chain_Management" size="2048" source="CrossTab:Header:FieldName:S.2.2.2.1 Supply Chain Management:Concat:" type="V_WString" />
-            <Field name="S_2_2_3_Social_Supplier_Certification" size="2048" source="CrossTab:Header:FieldName:S.2.2.3 Social Supplier Certification:Concat:" type="V_WString" />
-            <Field name="S_2_2_4_Fair_Trade_Products" size="2048" source="CrossTab:Header:FieldName:S.2.2.4 Fair Trade Products:Concat:" type="V_WString" />
-            <Field name="S_2_2_5_Contractor_Safety_Programme" size="2048" source="CrossTab:Header:FieldName:S.2.2.5 Contractor Safety Programme:Concat:" type="V_WString" />
-            <Field name="S_2_2_6_Contractor_Fatalities" size="2048" source="CrossTab:Header:FieldName:S.2.2.6 Contractor Fatalities:Concat:" type="V_WString" />
-            <Field name="S_3_1_1_Responsible_Marketing_Policy" size="2048" source="CrossTab:Header:FieldName:S.3.1.1 Responsible Marketing Policy:Concat:" type="V_WString" />
-            <Field name="S_3_1_2_Advertising_Ethics_Policy" size="2048" source="CrossTab:Header:FieldName:S.3.1.2 Advertising Ethics Policy:Concat:" type="V_WString" />
-            <Field name="S_3_1_3_Data_Privacy___Security_Policy" size="2048" source="CrossTab:Header:FieldName:S.3.1.3 Data Privacy &amp; Security Policy:Concat:" type="V_WString" />
-            <Field name="S_3_1_3_1_Data_Privacy_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.3.1 Data Privacy Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_3_2_Data_Request_Management" size="2048" source="CrossTab:Header:FieldName:S.3.1.3.2 Data Request Management:Concat:" type="V_WString" />
-            <Field name="S_3_1_3_3_Cybersecurity_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.3.3 Cybersecurity Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_4_Electromagnetic_Safety_Programmes" size="2048" source="CrossTab:Header:FieldName:S.3.1.4 Electromagnetic Safety Programmes:Concat:" type="V_WString" />
-            <Field name="S_3_1_6_Editorial_Guidelines" size="2048" source="CrossTab:Header:FieldName:S.3.1.6 Editorial Guidelines:Concat:" type="V_WString" />
-            <Field name="S_3_1_6_1_Media_Ethics_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.6.1 Media Ethics Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_8_Service_Delays" size="2048" source="CrossTab:Header:FieldName:S.3.1.8 Service Delays:Concat:" type="V_WString" />
-            <Field name="S_3_1_9_Product_Health_Statement" size="2048" source="CrossTab:Header:FieldName:S.3.1.9 Product Health Statement:Concat:" type="V_WString" />
-            <Field name="S_3_1_9_1_Product_and_Service_Safety_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.9.1 Product and Service Safety Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_10_Occupier_Satisfaction_Surveys" size="2048" source="CrossTab:Header:FieldName:S.3.1.10 Occupier Satisfaction Surveys:Concat:" type="V_WString" />
-            <Field name="S_3_1_11_Customer_Eco_Efficiency_Programmes" size="2048" source="CrossTab:Header:FieldName:S.3.1.11 Customer Eco-Efficiency Programmes:Concat:" type="V_WString" />
-            <Field name="S_3_1_12_Drug_Promotion_Standards" size="2048" source="CrossTab:Header:FieldName:S.3.1.12 Drug Promotion Standards:Concat:" type="V_WString" />
-            <Field name="S_3_1_13_Ethical_Marketing_Promotion" size="2048" source="CrossTab:Header:FieldName:S.3.1.13 Ethical Marketing Promotion:Concat:" type="V_WString" />
-            <Field name="S_3_1_14_Responsible_Gaming_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.14 Responsible Gaming Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_15_Value_Based_Health_Care_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.15 Value-Based Health Care Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_16_Nutrition_and_Health_Programme" size="2048" source="CrossTab:Header:FieldName:S.3.1.16 Nutrition and Health Programme:Concat:" type="V_WString" />
-            <Field name="S_3_1_17_Asset_Integrity_Management" size="2048" source="CrossTab:Header:FieldName:S.3.1.17 Asset Integrity Management:Concat:" type="V_WString" />
-            <Field name="S_3_2_1_QMS_Certifications" size="2048" source="CrossTab:Header:FieldName:S.3.2.1 QMS Certifications:Concat:" type="V_WString" />
-            <Field name="S_3_2_2_Trial_Data_Transparency" size="2048" source="CrossTab:Header:FieldName:S.3.2.2 Trial Data Transparency:Concat:" type="V_WString" />
-            <Field name="S_3_2_3_U_S__Drug_Price_Transparency" size="2048" source="CrossTab:Header:FieldName:S.3.2.3 U.S. Drug Price Transparency:Concat:" type="V_WString" />
-            <Field name="S_4_2_1_Human_Rights_Policy" size="2048" source="CrossTab:Header:FieldName:S.4.2.1 Human Rights Policy:Concat:" type="V_WString" />
-            <Field name="S_4_2_1_2_Human_Rights_Programme" size="2048" source="CrossTab:Header:FieldName:S.4.2.1.2 Human Rights Programme:Concat:" type="V_WString" />
-            <Field name="S_4_2_2_Community_Involvement_Programmes" size="2048" source="CrossTab:Header:FieldName:S.4.2.2 Community Involvement Programmes:Concat:" type="V_WString" />
-            <Field name="S_4_2_3_Financial_Inclusion" size="2048" source="CrossTab:Header:FieldName:S.4.2.3 Financial Inclusion:Concat:" type="V_WString" />
-            <Field name="S_4_2_4_Access_to_Medicine_Programme" size="2048" source="CrossTab:Header:FieldName:S.4.2.4 Access to Medicine Programme:Concat:" type="V_WString" />
-            <Field name="S_4_2_5_Neglected_Diseases_R_D" size="2048" source="CrossTab:Header:FieldName:S.4.2.5 Neglected Diseases R&amp;D:Concat:" type="V_WString" />
-            <Field name="S_4_2_6_Equitable_Pricing_and_Availability" size="2048" source="CrossTab:Header:FieldName:S.4.2.6 Equitable Pricing and Availability:Concat:" type="V_WString" />
-            <Field name="S_4_2_6_1_Intellectual_Property_Access" size="2048" source="CrossTab:Header:FieldName:S.4.2.6.1 Intellectual Property Access:Concat:" type="V_WString" />
-            <Field name="S_4_2_7_Access_to_Health_Care" size="2048" source="CrossTab:Header:FieldName:S.4.2.7 Access to Health Care:Concat:" type="V_WString" />
-            <Field name="S_4_2_9_Indigenous_Rights_Policy" size="2048" source="CrossTab:Header:FieldName:S.4.2.9 Indigenous Rights Policy:Concat:" type="V_WString" />
-            <Field name="S_4_2_10_Access_to_Basic_Services" size="2048" source="CrossTab:Header:FieldName:S.4.2.10 Access to Basic Services:Concat:" type="V_WString" />
-            <Field name="S_4_2_11_Community_Development_Programmes" size="2048" source="CrossTab:Header:FieldName:S.4.2.11 Community Development Programmes:Concat:" type="V_WString" />
-            <Field name="S_4_2_15_Noise_Management" size="2048" source="CrossTab:Header:FieldName:S.4.2.15 Noise Management:Concat:" type="V_WString" />
-            <Field name="S_4_4_1_Systemic_Risk_Management" size="2048" source="CrossTab:Header:FieldName:S.4.4.1 Systemic Risk Management:Concat:" type="V_WString" />
-            <Field name="S_4_4_2_Systemic_Risk_Reporting" size="2048" source="CrossTab:Header:FieldName:S.4.4.2 Systemic Risk Reporting:Concat:" type="V_WString" />
-            <Field name="S_4_4_3_Tier_1_Capital_Buffer" size="2048" source="CrossTab:Header:FieldName:S.4.4.3 Tier 1 Capital Buffer:Concat:" type="V_WString" />
-            <Field name="S_4_4_5_Leverage_Ratio" size="2048" source="CrossTab:Header:FieldName:S.4.4.5 Leverage Ratio:Concat:" type="V_WString" />
-            <Field name="S_4_4_8_Asset_Quality" size="2048" source="CrossTab:Header:FieldName:S.4.4.8 Asset Quality:Concat:" type="V_WString" />
+            <Field name="Date" size="254" source="CrossTab:Group:First:" type="V_WString" />
+            <Field name="Ticker" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+            <Field name="E_1_1_Environmental_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_10_Carbon_Intensity_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_11_Renewable_Energy_Use" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_Environmental_Management_System" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_1_Biodiversity_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_2_Site_Closure___Rehabilitation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_4_Oil_Spill_Disclosure___Performance" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_5_Cyanide_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_6_1_Solid_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_6_2_Mineral_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_6_3_Effluent_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_6_4_Offshore_Well_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_6_5_Radioactive_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_7_Water_Intensity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_7_1_Water_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_7_2_Water_Intensity_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_7_3_Fresh_Water_Intensity_for_Generators" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_8_Forest_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_9_Deforestation_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_2_10_Deforestation_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_EMS_Certification" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_1_Emergency_Response_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_2_Hazardous_Waste_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_3_Non_GHG_Air_Emissions_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_4_Water_Management_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_3_6_Tailings_Management_and_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_6_Scope_of_GHG_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_6_1_GHG_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_6_2_Physical_Climate_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_7_0_GHG_Reduction_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_7_1_Green_Logistics_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_8_Renewable_Energy_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_1_9_Carbon_Intensity" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_Green_Procurement_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_1_Supplier_Environmental_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_2_Supplier_Environmental_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_3_Sustainable_Agriculture_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_5_Food___Beverage_Sustainability_Initiatives" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_6_Green_Outsourced_Logistics_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_7_Recycled_Material_Use" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_8_FSC_Certified_Sourcing" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_9_Sustainable_Food_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_2_1_11_Shipbreaking_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_1_Sustainable_Products___Services" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_3_Fleet_Emissions" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_4_Fleet_Emissions_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_5_Sustainable_Mobility_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_6_Eco_Design" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_7_Product_Stewardship_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_8_Organic_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_9_GMO_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_10_Credit___Loan_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_11_Responsible_Asset_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_12_Real_Estate_LCA" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_13_Green_Buildings_Investments" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_14_Share_of_Green_Buildings" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_15_Sustainable_Financial_Initiatives" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_16_Hazardous_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_17_Carbon_Intensity_of_Generation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_18_Transmission_Loss_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_19_Hazardous_Substances_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_20_Fleet_Age" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="E_3_1_21_Carbon_Intensity_Trend_of_Generation" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_1_Bribery___Corruption_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_1_1_Bribery___Corruption_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_2_Whistleblower_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_2_1_Business_Ethics_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_Global_Compact_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_1_PRI_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_2_Responsible_Investment_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_3_UNEPFI_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_4_Green_Building_Memberships" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_5_Equator_Principles_Signatory" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_6_Responsible_Investment_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_7_Corporate_Finance___ESG_Integration" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_8_Responsible_Product_Offering" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_3_9_Underwriting_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_1_Money_Laundering_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_2_Compliance_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_3_Animal_Testing_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_3_1_Animal_Testing_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_4_Animal_Welfare_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_4_1_Animal_Welfare_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_5_Policy_on_Emerging_Technologies" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_6_Clinical_Trial_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_1_4_7_Clinical_Trial_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_2_1_ESG_Reporting_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_2_2_Verification_of_ESG_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_2_5_ESG_Governance" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_3_1_Political_Involvement_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_3_2_Lobbying_and_Political_Expenses" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="G_3_3_1_Transparency_on_Government_Payments" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_1_Freedom_of_Association_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_1_1_Working_Hours_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_2_Discrimination_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_3_Diversity_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_3_1_Gender_Pay_Equality_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_3_2_Gender_Pay_Disclosure" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_4_Collective_Bargaining_Agreements" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_5_Employee_Turnover_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_5_1_Percentage_of_Temporary_Workers" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_5_2_Human_Capital_Development" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_1_Employee_Training" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_2_1_Health_and_Safety_Management_System" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_3_HIV_Aids_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_4_Health___Safety_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_5_LTIR_Trend" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_1_6_6_Employee_Fatality_Rate" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_1_Scope_of_Social_Supplier_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_1_2_Signatory_to_Responsible_Business_Alliance__RBA_" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_1_3_Conflict_Minerals_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_1_3_1_Conflict_Minerals_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_2_2_1_Supply_Chain_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_2_3_Social_Supplier_Certification" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_2_4_Fair_Trade_Products" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_2_5_Contractor_Safety_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_2_2_6_Contractor_Fatalities" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_1_Responsible_Marketing_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_2_Advertising_Ethics_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_3_Data_Privacy___Security_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_3_1_Data_Privacy_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_3_2_Data_Request_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_3_3_Cybersecurity_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_4_Electromagnetic_Safety_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_6_Editorial_Guidelines" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_6_1_Media_Ethics_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_8_Service_Delays" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_9_Product_Health_Statement" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_9_1_Product_and_Service_Safety_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_10_Occupier_Satisfaction_Surveys" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_11_Customer_Eco_Efficiency_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_12_Drug_Promotion_Standards" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_13_Ethical_Marketing_Promotion" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_14_Responsible_Gaming_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_15_Value_Based_Health_Care_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_16_Nutrition_and_Health_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_1_17_Asset_Integrity_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_2_1_QMS_Certifications" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_2_2_Trial_Data_Transparency" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_3_2_3_U_S__Drug_Price_Transparency" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_1_Human_Rights_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_1_2_Human_Rights_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_2_Community_Involvement_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_3_Financial_Inclusion" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_4_Access_to_Medicine_Programme" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_5_Neglected_Diseases_R_D" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_6_Equitable_Pricing_and_Availability" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_6_1_Intellectual_Property_Access" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_7_Access_to_Health_Care" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_9_Indigenous_Rights_Policy" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_10_Access_to_Basic_Services" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_11_Community_Development_Programmes" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_2_15_Noise_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_4_1_Systemic_Risk_Management" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_4_2_Systemic_Risk_Reporting" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_4_3_Tier_1_Capital_Buffer" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_4_5_Leverage_Ratio" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
+            <Field name="S_4_4_8_Asset_Quality" size="254" source="File: C:\Users\bbeals\Desktop\Thesis Data\ESGRR_Indicators_20201007.txt" type="V_WString" />
           </RecordInfo>
           <SortInfo>
             <Field field="Date" order="Asc" />
@@ -9247,7 +9241,7 @@ FieldName = R...</DefaultAnnotationText>
     <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
-    <ZoomLevel value="1" />
+    <ZoomLevel value="2" />
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
