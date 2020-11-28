@@ -10,10 +10,9 @@ Description: Thesis Data Preparation
 ######################################
 
 import pandas as pd
-from keras.utils import to_categorical
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
-import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input,Dense,Flatten,Reshape
@@ -30,12 +29,16 @@ data = pd.read_csv(r'C:\Users\bbeals\Desktop\Thesis Data\Data.csv')
 # PREPARE DATA
 ######################################
 
-## One-hot encode categorical variables
-#train_labels = to_categorical(train_labels)
-
 ## Define independent variables
 features = data.loc[:,'BETA_ACWI':]
 features = features.drop(['MM FORMULA'], axis=1)
+
+## One-hot encode categorical variables
+onehot = pd.get_dummies(data.SECTOR)
+features = features.join(onehot)
+
+## Fill missing values
+features = features.fillna(0)
 
 ## Define dependent variables
 return_1D_adjclose = data.loc[:,['Return_1D_AdjClose']]
@@ -95,17 +98,22 @@ y_test = scaler.fit_transform(y_test)
 # DIMENSIONALITY REDUCTION
 ######################################
 
+# Fixed dimensions
+input_dim = x_train.shape[1]
+encoding_dim = 3
+
+
 ## https://predictivehacks.com/autoencoders-for-dimensionality-reduction/
 ## runs, but autoencoder returns nan (not a number)
 
 # Encoder
 encoder = Sequential()
-encoder.add(Flatten(input_shape=[192,]))
+encoder.add(Flatten(input_shape=[input_dim,]))
 #encoder.add(Dense(400, activation="relu"))
 #encoder.add(Dense(200, activation="relu"))
 encoder.add(Dense(48, activation="relu"))
 encoder.add(Dense(12, activation="relu"))
-#encoder.add(Dense(3, activation="relu"))
+#encoder.add(Dense(encoding_dim, activation="relu"))
 
 # Decoder
 decoder = Sequential()
@@ -113,27 +121,26 @@ decoder.add(Dense(48,input_shape=[12], activation='relu'))
 #decoder.add(Dense(100, activation='relu'))
 #decoder.add(Dense(200, activation='relu'))
 #decoder.add(Dense(400, activation='relu'))
-decoder.add(Dense(192, activation="relu"))
-decoder.add(Reshape([192,]))
+decoder.add(Dense(input_dim, activation="relu"))
+decoder.add(Reshape([input_dim,]))
 
 # Autoencoder
 autoencoder = Sequential([encoder, decoder])
 autoencoder.compile(loss="mse")
 autoencoder.fit(x_train, x_train, epochs=50)
 
+# Generate predictions
+AE_1 = pd.DataFrame(encoder.predict(x_train))
+AE_1['target'] = y_train
+
 # Generate plot showing reduced dimensions
-encoded_2dim = encoder.predict(x_train)
-AE = pd.DataFrame(encoded_2dim, columns = ['X1', 'X2'])
-AE['target'] = y_train
-sns.lmplot(x='X1', y='X2', data=AE, hue='target', fit_reg=False, size=10)
+plt.title('First two dimensions of encoded data, colored by single day returns')
+plt.scatter(AE_1[0], AE_1[1], c=AE_1['target'], s=1, alpha=0.3)
+plt.show()
 
 
 ## https://quantdare.com/dimensionality-reduction-method-through-autoencoders/
 ## runs, but autoencoder returns nan (not a number)
-
-# Fixed dimensions
-input_dim = x_train.shape[1]
-encoding_dim = 3
 
 # Number of neurons in each Layer of encoders
 input_layer = Input(shape=(input_dim, ))
@@ -144,9 +151,14 @@ encoder_layer_3 = Dense(encoding_dim, activation="tanh")(encoder_layer_2)
 # Crear encoder model
 encoder = Model(inputs=input_layer, outputs=encoder_layer_3)
 
-# Use the model to predict the factors which sum up the information of interest rates.
-encoded_data = pd.DataFrame(encoder.predict(x_train))
-encoded_data.columns = ['factor_1', 'factor_2', 'factor_3']
+# Generate predictions
+AE_2 = pd.DataFrame(encoder.predict(x_train))
+AE_2['target'] = y_train
+
+# Generate plot showing reduced dimensions
+plt.title('First two dimensions of encoded data, colored by single day returns')
+plt.scatter(AE_2[0], AE_2[1], c=AE_2['target'], s=1, alpha=0.3)
+plt.show()
 
 
 ## https://www.datacamp.com/community/tutorials/autoencoder-keras-tutorial
