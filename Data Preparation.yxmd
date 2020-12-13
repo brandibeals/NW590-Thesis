@@ -193,7 +193,7 @@ Date - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1326" y="54.00002" />
+        <Position x="1326" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -217,6 +217,7 @@ Date - Descending</DefaultAnnotationText>
             <FormulaField expression="IIF(IsNull([FS_pbRatio]),[BBG_pbRatio],[FS_pbRatio])" field="PriceToBookRatio" size="4" type="Float" />
             <FormulaField expression="IIF(IsNull([FS_roe]),[BBG_roe],[FS_roe])" field="ReturnOnEquity" size="4" type="Float" />
             <FormulaField expression="DateTimeTrim([Date],'month')" field="DateMonth" size="10" type="Date" />
+            <FormulaField expression="IIF([FS_betaACWI]&gt;500,Null(),[FS_betaACWI])" field="FS_betaACWI" size="4" type="Float" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -253,6 +254,8 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="FS_betaACWI" selected="True" rename="BETA_ACWI" />
             <SelectField field="DFF" selected="True" rename="INT_RATE" type="Float" size="4" />
             <SelectField field="DEXUSEU" selected="True" rename="EX_RATE" type="Float" size="4" />
+            <SelectField field="DGS1MO" selected="True" rename="1M_TREASURY" />
+            <SelectField field="DGS1" selected="True" rename="1Y_TREASURY" />
             <SelectField field="Mkt-RF" selected="False" type="Float" size="4" />
             <SelectField field="SMB" selected="False" type="Float" size="4" />
             <SelectField field="HML" selected="False" type="Float" size="4" />
@@ -500,6 +503,8 @@ Date - Descending</DefaultAnnotationText>
             <SelectField field="rawZ" selected="False" />
             <SelectField field="OpenPriceMovingAverage" selected="False" />
             <SelectField field="ClosePriceMovingAverage" selected="False" />
+            <SelectField field="HighPriceMovingAverage" selected="True" />
+            <SelectField field="LowPriceMovingAverage" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -510,33 +515,6 @@ Date - Descending</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="18">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1446" y="54.00002" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <UpdateField value="True" />
-          <UpdateField_Name>MarketCap</UpdateField_Name>
-          <CreateField_Name>New Field</CreateField_Name>
-          <CreateField_Type>Int32</CreateField_Type>
-          <CreateField_Size>4</CreateField_Size>
-          <OtherRows>Empty</OtherRows>
-          <NumRows value="1" />
-          <Expression>IIF(ISNULL([MarketCap]),[Row+1:MarketCap],[MarketCap])</Expression>
-          <GroupByFields>
-            <Field field="Ticker" />
-          </GroupByFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>MarketCap</AnnotationText>
-          <DefaultAnnotationText>IIF(ISNULL([MarketCap]),[Row+1:MarketCap],[MarketCap])</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
@@ -736,7 +714,7 @@ Date - Descending</DefaultAnnotationText>
       <Properties>
         <Configuration>
           <Passwords />
-          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv</File>
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv</File>
           <FormatSpecificOptions>
             <CodePage>28591</CodePage>
             <Delimeter>,</Delimeter>
@@ -750,19 +728,24 @@ Date - Descending</DefaultAnnotationText>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Market Indicators 20201024.csv</DefaultAnnotationText>
+          <DefaultAnnotationText>Market Indicators 20201213.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="DATE" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="DFF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="DEXUSEU" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="Mkt-RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="SMB" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="HML" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
-            <Field name="Mom" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201024.csv" type="V_String" />
+            <Field name="DATE" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="DFF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="DEXUSEU" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="DGS1MO" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="DGS1" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="Mkt-RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="SMB" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="HML" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="RF" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
+            <Field name="Mom" size="254" source="File: C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data\Market Indicators 20201213.csv" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -787,11 +770,11 @@ Date - Descending</DefaultAnnotationText>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
-                <SelectField field="Left_DateMonth" selected="False" input="Left_" />
                 <SelectField field="Right_Date" selected="False" rename="Right_Date" input="Right_" />
                 <SelectField field="Right_Ticker" selected="False" rename="Right_Ticker" input="Right_" />
                 <SelectField field="Right_DateTime_Out" selected="False" input="Right_" />
                 <SelectField field="Right_DateMonth" selected="False" rename="Right_DateMonth" input="Right_" />
+                <SelectField field="Left_DateMonth" selected="False" input="Left_" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -939,7 +922,7 @@ yyyy-MM-dd</DefaultAnnotationText>
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="1266" y="486" />
+        <Position x="1146" y="486" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -978,7 +961,7 @@ yyyy-MM-dd</DefaultAnnotationText>
     </Node>
     <Node ToolID="38">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="1338" y="486" />
+        <Position x="1218" y="486" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1022,6 +1005,8 @@ yyyy-MM-dd</DefaultAnnotationText>
                 <SelectField field="Right_Volume" selected="False" rename="Right_Volume" input="Right_" />
                 <SelectField field="Right_Ticker" selected="False" rename="Right_Ticker" input="Right_" />
                 <SelectField field="Right_DateTime_Out" selected="False" input="Right_" />
+                <SelectField field="Right_HighPriceMovingAverage" selected="False" input="Right_" />
+                <SelectField field="Right_LowPriceMovingAverage" selected="False" input="Right_" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -1138,7 +1123,7 @@ AND
     </Node>
     <Node ToolID="50">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1433" y="442" width="608" height="173" />
+        <Position x="1313" y="442" width="608" height="173" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1156,7 +1141,7 @@ AND
       <ChildNodes>
         <Node ToolID="47">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="1458" y="486" />
+            <Position x="1338" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1176,7 +1161,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="48">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1602" y="486" />
+            <Position x="1482" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1200,7 +1185,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="49">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1530" y="486" />
+            <Position x="1410" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1226,7 +1211,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="51">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1710" y="486" />
+            <Position x="1590" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1252,7 +1237,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1806" y="486" />
+            <Position x="1686" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1278,7 +1263,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1926" y="486" />
+            <Position x="1806" y="486" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1306,7 +1291,7 @@ DateTime_Out - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="474" y="65.99998" width="752" height="173" />
+        <Position x="474" y="66" width="752" height="173" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1517,6 +1502,107 @@ CloseP...</DefaultAnnotationText>
         </Node>
       </ChildNodes>
     </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2418" y="450" width="197.9357" height="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Null High and Low Prices</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="2442" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Date</UpdateField_Name>
+              <CreateField_Name>HighPriceMovingAverage</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="5" />
+              <Expression>AVERAGE([Row+5:High],[Row+4:High],
+[Row+3:High],[Row+2:High],
+[Row+1:High])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>High Price 5-day Moving Average</AnnotationText>
+              <DefaultAnnotationText>AVERAGE([Row+5:High],[Row+4:High],
+[Row+3:High],[Row+2:High],...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="2538" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>LowPriceMovingAverage</CreateField_Name>
+              <CreateField_Type>Float</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Nearest</OtherRows>
+              <NumRows value="5" />
+              <Expression>AVERAGE([Row+5:Low],[Row+4:Low],
+[Row+3:Low],[Row+2:Low],
+[Row+1:Low])</Expression>
+              <GroupByFields>
+                <Field field="Ticker" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Low Price 5-day Moving Average</AnnotationText>
+              <DefaultAnnotationText>AVERAGE([Row+5:Low],[Row+4:Low],
+[Row+3:Low],[Row+2:Low],
+[Ro...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2634" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF(IsNull([High]),[HighPriceMovingAverage],[High])" field="High" size="4" type="Float" />
+                <FormulaField expression="IIF(IsNull([Low]),[LowPriceMovingAverage],[Low])" field="Low" size="4" type="Float" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>High = IIF(IsNull([High]),[HighPriceMovingAverage],[High])
+Low = IIF(IsNull([Low...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -1533,7 +1619,11 @@ CloseP...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="16" Connection="Output" />
-      <Destination ToolID="18" Connection="Input" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="25" Connection="Right" />
     </Connection>
     <Connection>
       <Origin ToolID="17" Connection="Output" />
@@ -1542,14 +1632,6 @@ CloseP...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="17" Connection="Output" />
       <Destination ToolID="45" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="18" Connection="Output" />
-      <Destination ToolID="25" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="29" Connection="Output" />
-      <Destination ToolID="25" Connection="Right" />
     </Connection>
     <Connection>
       <Origin ToolID="23" Connection="Output" />
@@ -1667,6 +1749,14 @@ CloseP...</DefaultAnnotationText>
       <Origin ToolID="14" Connection="Output" />
       <Destination ToolID="16" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
   </Connections>
   <Properties>
     <Memory default="True" />
@@ -1678,11 +1768,11 @@ CloseP...</DefaultAnnotationText>
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
-    <DisableAllOutput value="False" />
+    <DisableAllOutput value="True" />
     <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
-    <ZoomLevel value="1" />
+    <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />

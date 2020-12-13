@@ -18,9 +18,8 @@ import os
 ######################################
 
 os.chdir(r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\Data')
-now_time = datetime.now()
 date_format = '%Y%m%d'
-today = now_time.strftime(date_format)
+today = datetime.now().strftime(date_format)
 end_time = datetime(2020, 10, 31)
 start_time = datetime(2018, 1 , 1)
 
@@ -36,6 +35,10 @@ start_time = datetime(2018, 1 , 1)
 FREDinterestrate = web.DataReader('DFF', 'fred', start_time, end_time)
 # https://fred.stlouisfed.org/series/DEXUSEU
 FREDexchangerate = web.DataReader('DEXUSEU', 'fred', start_time, end_time)
+# https://fred.stlouisfed.org/series/DGS1MO
+FRED1Mtreasuryrate = web.DataReader('DGS1MO', 'fred', start_time, end_time)
+# https://fred.stlouisfed.org/series/DGS1
+FRED1Ytreasuryrate = web.DataReader('DGS1', 'fred', start_time, end_time)
 
 # Fama-French Data
 # http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
@@ -52,6 +55,8 @@ famafrenchMom = famafrenchMom[0]
 ######################################
 
 output_df = FREDinterestrate.join(FREDexchangerate)
+output_df = output_df.join(FRED1Mtreasuryrate)
+output_df = output_df.join(FRED1Ytreasuryrate)
 output_df = output_df.join(famafrench)
 output_df = output_df.join(famafrenchMom)
 
