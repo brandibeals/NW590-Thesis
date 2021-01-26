@@ -18,7 +18,7 @@ from sklearn.preprocessing import MinMaxScaler
 from tensorflow import random
 from tensorflow.keras.models import Sequential,Model
 from tensorflow.keras.layers import Input,Dense,Flatten,Reshape,LSTM,Dropout
-from keras.utils.vis_utils import plot_model
+from tensorflow.keras.utils import plot_model
 
 ######################################
 # DEFIINITIONS
@@ -37,6 +37,9 @@ today = datetime.now().strftime('%Y%m%d')
 ## Set seed for reproducibility
 np.random.seed(1)
 random.set_seed(1)
+
+## Set the number of timesteps
+n_steps = 5
 
 ######################################
 # PREPARE DATA
@@ -120,14 +123,17 @@ plt.plot(y_train.loc[:,[returns_type,'DATE']].groupby('DATE').agg(['sum']), colo
 plt.plot(y_validation.loc[:,[returns_type,'DATE']].groupby('DATE').agg(['sum']), color='tab:blue')
 plt.plot(y_test.loc[:,[returns_type,'DATE']].groupby('DATE').agg(['sum']), color='tab:gray')
 plt.legend(['Training Set', 'Validation Set', 'Testing Set'])
+plt.savefig('..\Images\data_split.png', bbox_inches='tight', dpi=300)
 plt.show()
 
 ######################################
 # SCALING
 ######################################
 
+## Define scaler
 scaler = MinMaxScaler(feature_range=(0, 1))
 
+## Scale only numeric columns
 #x_train = scaler.fit_transform(x_train)
 x_train.iloc[:,:-2] = scaler.fit_transform(x_train.iloc[:,:-2])
 y_train[[returns_type]] = scaler.fit_transform(y_train[[returns_type]])
@@ -139,6 +145,9 @@ y_validation[[returns_type]] = scaler.fit_transform(y_validation[[returns_type]]
 #x_test = scaler.fit_transform(x_test)
 x_test.iloc[:,:-2] = scaler.fit_transform(x_test.iloc[:,:-2])
 y_test[[returns_type]] = scaler.fit_transform(y_test[[returns_type]])
+
+## Correlation plot
+plt.matshow(x_train.corr())
 
 ######################################
 # DATA RESHAPING
@@ -220,13 +229,18 @@ matrix_validation = x_validation.join(y_validation[[returns_type]])
 matrix_test = x_test.join(y_test[[returns_type]])
 
 # Call function to generate sequences
-n_steps = 5
 x_train_matrix, y_train_matrix = matrix5day(matrix_train)
 x_validation_matrix, y_validation_matrix = matrix5day(matrix_validation)
 x_test_matrix, y_test_matrix = matrix5day(matrix_test)
 
+# Handle empty records
+for i in range(x_train_matrix.size-1):
+    if x_train_matrix[i].size == 0:
+        print(i)
+        x_train_matrix = np.delete(x_train_matrix, i)
+        y_train_matrix = np.delete(y_train_matrix, i)
+
 # Convert list to array
-x_train_matrix = np.delete(x_train_matrix, 1596) # this record is empty
 x_train_matrix = np.concatenate(x_train_matrix)
 y_train_matrix = np.concatenate(y_train_matrix)
 x_validation_matrix = np.concatenate(x_validation_matrix)
@@ -243,141 +257,143 @@ print('Y Validation: ' + str(y_validation_matrix.shape))
 print('X Test: ' + str(x_test_matrix.shape))
 print('Y Test: ' + str(y_test_matrix.shape))
 
+######################################
+# FINALIZE DATA FOR MODELING
+######################################
 
+## Ticker Array Data Set (Option 2)
+# Drop DATE and TICKER
+x_train_array_drop = x_train_array[:,:,:-2]
+y_train_array_drop = y_train_array[:,:,:-2]
+x_validation_array_drop = x_validation_array[:,:,:-2]
+y_validation_array_drop = y_validation_array[:,:,:-2]
+x_test_array_drop = x_test_array[:,:,:-2]
+y_test_array_drop = y_test_array[:,:,:-2]
 
+# Convert to float type
+x_train_array_drop = np.asarray(x_train_array_drop).astype('float32')
+x_validation_array_drop = np.asarray(x_validation_array_drop).astype('float32')
+x_test_array_drop = np.asarray(x_test_array_drop).astype('float32')
 
+# Save data
+np.savez_compressed(r'..\Data\x_train_3d_ticker.npz', x_train_array_drop)
 
+## Timestep Matrix Data Set (Option 3)
+# Drop DATE and TICKER
+x_train_matrix_drop = x_train_matrix[:,:,:-2]
+x_validation_matrix_drop = x_validation_matrix[:,:,:-2]
+x_test_matrix_drop = x_test_matrix[:,:,:-2]
 
+# Convert to float type
+x_train_matrix_drop = np.asarray(x_train_matrix_drop).astype('float32')
+x_validation_matrix_drop = np.asarray(x_validation_matrix_drop).astype('float32')
+x_test_matrix_drop = np.asarray(x_test_matrix_drop).astype('float32')
 
-
-
-
-
-
-
-
-
-
-
-## Drop TICKER and DATE variables
-x_train = x_train.drop(['TICKER','DATE'], axis=1)
-y_train = y_train.drop(['TICKER','DATE'], axis=1)
-x_validation = x_validation.drop(['TICKER','DATE'], axis=1)
-y_validation = y_validation.drop(['TICKER','DATE'], axis=1)
-x_test = x_test.drop(['TICKER','DATE'], axis=1)
-y_test = y_test.drop(['TICKER','DATE'], axis=1)
+# Save data
+np.savez_compressed(r'..\Data\x_train_3d.npz', x_train_matrix_drop)
 
 ######################################
 # DIMENSIONALITY REDUCTION
 ######################################
 
 ## Fixed parameters
-batch_size = 5000
-input_dim = x_train.shape[1]
-encoding_dim = 3
+batch_size = 50
 epochs = 50
+encoding_dim = 3
+num_recs = x_train_matrix_drop.shape[0]
+input_dim = x_train_matrix_drop.shape[2]
 
 ## https://predictivehacks.com/autoencoders-for-dimensionality-reduction/
 # Encoder
-encoder = Sequential()
-encoder.add(Flatten(input_shape=[input_dim,]))
-encoder.add(Dense(96, activation="relu"))
-encoder.add(Dense(48, activation="relu"))
-encoder.add(Dense(12, activation="relu"))
+encoder = Sequential(name='SAE_encoder')
+encoder.add(Flatten(input_shape=(n_steps, input_dim)))
+encoder.add(Dense(96, activation='relu', name='encoderlayer1'))
+encoder.add(Dense(48, activation='relu', name='encoderlayer2'))
+encoder.add(Dense(12, activation='relu', name='encoderlayer3'))
 #encoder.add(Dense(encoding_dim, activation="relu"))
 
 # Decoder
-decoder = Sequential()
-decoder.add(Dense(48,input_shape=[12], activation='relu'))
-decoder.add(Dense(96, activation='relu'))
-decoder.add(Dense(input_dim, activation="relu"))
-decoder.add(Reshape([input_dim,]))
+decoder = Sequential(name='SAE_decoder')
+decoder.add(Dense(48, activation='relu', name='decoderlayer1', input_shape=(12,)))
+decoder.add(Dense(96, activation='relu', name='decoderlayer2'))
+decoder.add(Dense(n_steps*input_dim, activation="relu", name='decoderlayer3'))
+decoder.add(Reshape((n_steps, input_dim)))
 
 # Compile and fit autoencoder
-autoencoder = Sequential([encoder, decoder])
-autoencoder.compile(loss="mse")
-AE_1_history = autoencoder.fit(x_train, x_train, epochs=epochs)
+autoencoder = Sequential([encoder, decoder], name='SAE1')
+autoencoder.compile(loss='mse', metrics=['accuracy'])
+AE_1_history = autoencoder.fit(x_train_matrix_drop, x_train_matrix_drop, epochs=epochs)
 
 # Print summary
 print(autoencoder.summary())
-# Note, the example assumes that you have the graphviz graph library and the Python interface installed.
+print(autoencoder.layers)
+# Note, the following assumes that you have the graphviz graph library and the Python interface installed
 plot_model(autoencoder, to_file='\Images\model_plot.png', show_shapes=True, show_layer_names=True)
 
 # Save model
 autoencoder.save('AE_1_%s' % today)
+autoencoder.save('Models/SAE_1_%s.h5' % today)
 
 # Plot training loss
 plt.clf()
 epochs_range = range(1, epochs+1)
 AE_1_loss = AE_1_history.history['loss']
 #AE_1_val_loss = AE_1_history.history['val_loss']
-plt.plot(epochs_range, AE_1_loss, 'bo', label='Training loss')
-#plt.plot(epochs_range, AE_1_val_loss, 'b', label='Validation loss')
-plt.title('Training and validation loss for AE1')
+plt.plot(epochs_range, AE_1_loss, label='Training loss', color='tab:blue')
+#plt.plot(epochs_range, AE_1_val_loss, label='Validation loss', color='tab:gray')
+plt.title('Training loss for SAE')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
+plt.savefig('..\Images\SAE1_training_loss.png', bbox_inches='tight', dpi=300)
 plt.show()
 
 # Plot training accuracy
 plt.clf()
-AE_1_acc = AE_1_history.history['acc']
-AE_1_val_acc = AE_1_history.history['val_acc']
-plt.plot(epochs_range, AE_1_acc, 'bo', label='Training acc')
-plt.plot(epochs_range, AE_1_val_acc, 'b', label='Validation acc')
-plt.title('Training and validation accuracy for AE1')
+AE_1_acc = AE_1_history.history['accuracy']
+#AE_1_val_acc = AE_1_history.history['val_acc']
+plt.plot(epochs_range, AE_1_acc, label='Training acc', color='tab:blue')
+#plt.plot(epochs_range, AE_1_val_acc, label='Validation acc', color='tab:gray')
+plt.title('Training accuracy for SAE')
 plt.xlabel('Epochs')
 plt.ylabel('Accuracy')
 plt.legend()
+plt.savefig('..\Images\SAE1_training_accuracy.png', bbox_inches='tight', dpi=300)
 plt.show()
 
-# Evaluate results
-AE_1_results = autoencoder.evaluate(x_train, x_train)
-AE_1 = pd.DataFrame(encoder.predict(x_train))
-AE_1['target'] = y_train
+# Evaluate results on validation data
+AE_1_results = autoencoder.evaluate(x_validation_matrix_drop, x_validation_matrix_drop)
+
+# Generate encoded predictions
+AE_1 = encoder.predict(x_train_matrix_drop)
+print(AE_1.shape)
+
+# Add in ticker, date, and y
+print(x_train_matrix.shape)
+ticker_date = x_train_matrix[:,-1:,-2:]
+ticker_date = ticker_date.reshape((ticker_date.shape[0], ticker_date.shape[2]))
+AE_1_output = np.column_stack((AE_1, ticker_date))
+
+print(y_train_matrix.shape)
+AE_1_output = np.column_stack((AE_1_output, y_train_matrix))
+
+# Save predictions
+np.savetxt('..\Data\SAE_training_encoded.csv', AE_1_output, delimiter=',', fmt='%s')
 
 # Generate plot showing reduced dimensions
-plt.title('First two dimensions of encoded data, colored by single day returns')
-plt.scatter(AE_1[0], AE_1[1], c=AE_1['target'], s=1, alpha=0.3)
+plt.clf()
+plt.title('First two dimensions of encoded data')
+plt.scatter(AE_1[:,0], AE_1[:,2], s=1, alpha=0.3)
 plt.show()
 
-
-## https://quantdare.com/dimensionality-reduction-method-through-autoencoders/
-# Encoder
-input_layer = Input(shape=(input_dim, ))
-encoder_layer_1 = Dense(48, activation="tanh")(input_layer)
-encoder_layer_2 = Dense(12, activation="tanh")(encoder_layer_1)
-encoder_layer_3 = Dense(encoding_dim, activation="tanh")(encoder_layer_2)
-
-# Create model
-SAE = Model(inputs=input_layer, outputs=encoder_layer_3)
-print(SAE.summary())
-
-# Generate predictions
-AE_2 = pd.DataFrame(SAE.predict(x_train), columns=['factor1','factor2','factor3'])
-AE_2['target'] = y_train
-
-# Generate plot showing reduced dimensions
-plt.title('First two dimensions of encoded data, colored by single day returns')
-plt.scatter(AE_2['factor1'], AE_2['factor2'], c=AE_2['target'], s=1, alpha=0.3)
-plt.show()
+# Correlation plot of reduced dimensions
+plt.matshow(np.corrcoef(AE_1))
 
 
 ## https://www.datacamp.com/community/tutorials/autoencoder-keras-tutorial
 
 
 ## https://blog.keras.io/building-autoencoders-in-keras.html
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -435,41 +451,11 @@ plt.plot(inv_yhat, label='Predicted')
 plt.legend()
 plt.show()
 
-## https://www.datatechnotes.com/2018/12/time-series-data-prediction-with-lstm.html
-step=3
-test = returns.to_numpy()
-test = np.append(returns, np.repeat(test[-1,], step))
 
-def convertToMatrix(data, step):
- X, Y =[], []
- for i in range(len(data)-step):
-  d=i+step  
-  X.append(data[i:d,])
-  Y.append(data[d,])
- return np.array(X), np.array(Y)
 
-testX,testY =convertToMatrix(test, step)
-
-testX_play = np.reshape(testX, (int(testX.shape[0]/50), 50, testX.shape[1]))
-testX = np.reshape(testX, (testX.shape[0], 1, testX.shape[1]))
-
-## https://towardsdatascience.com/how-to-reshape-data-and-do-regression-for-time-series-using-lstm-133dad96cd00
-# In Keras, the number of time steps is equal to the number of LSTM cells. 
-# This is what the word “time steps” means in the 3D tensor of the shape [batch_size, timesteps, input_dim].
-
-num_steps = 3
-num_features = 2
-x_shaped = np.reshape(x, newshape=(-1, num_steps, num_features))
-
-## https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/
-# [samples, timesteps, features]
-
-# reshape from [samples/timesteps, features] into [samples, timesteps, features]
-n_features = 1
-X = X.reshape((X.shape[0], X.shape[1], n_features))
 
 ######################################
-# NEURAL NETWORK
+# LSTM
 ######################################
 
 ## Fixed dimensions
@@ -483,6 +469,8 @@ x_test_reshape = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
 AE_2 = AE_2.drop(['target'], axis=1)
 AE_2_reshape = np.reshape(AE_2.to_numpy(), (AE_2.shape[0], AE_2.shape[1], 1))
+
+
 
 ## https://datascienceplus.com/long-short-term-memory-lstm-and-how-to-implement-lstm-using-python/
 
@@ -529,11 +517,29 @@ predictions2 = model2.predict(x_test_reshape)
 predictions2 = scaler.inverse_transform(predictions2)
 rmse2 = np.sqrt(np.mean(((predictions2 - y_test)**2)))
 
+
+
+
+
+
+
+
+
+
+
+
+
 ######################################
 # POSSIBLE RESOURCES
 ######################################
 #https://stackoverflow.com/questions/58449353/lstm-deal-with-multiple-rows-in-a-date
+#https://towardsdatascience.com/how-to-reshape-data-and-do-regression-for-time-series-using-lstm-133dad96cd00
+#https://www.datatechnotes.com/2018/12/time-series-data-prediction-with-lstm.html
+#https://machinelearningmastery.com/how-to-develop-lstm-models-for-time-series-forecasting/
+#https://towardsdatascience.com/autoencoders-in-practice-dimensionality-reduction-and-image-denoising-ed9b9201e7e1
+#https://machinelearningmastery.com/autoencoder-for-regression/
 #https://machinelearningmastery.com/visualize-deep-learning-neural-network-model-keras/
+#https://www.datasciencecentral.com/profiles/blogs/stock-price-prediction-using-lstm-long-short-term-memory 
 
 ######################################
 # UNUSED CODE SNIPPETS
@@ -575,3 +581,28 @@ for i in range(x_train_matrix.shape[0]):
 list(set(matrix_train.TICKER))[1596]
 matrix_train[(matrix_train.TICKER == 'HONE')]
 
+## https://quantdare.com/dimensionality-reduction-method-through-autoencoders/
+# Encoder
+input_layer = Input(shape=(input_dim, ))
+encoder_layer_1 = Dense(48, activation="tanh")(input_layer)
+encoder_layer_2 = Dense(12, activation="tanh")(encoder_layer_1)
+encoder_layer_3 = Dense(encoding_dim, activation="tanh")(encoder_layer_2)
+# Create model
+SAE = Model(inputs=input_layer, outputs=encoder_layer_3)
+print(SAE.summary())
+# Generate predictions
+AE_2 = pd.DataFrame(SAE.predict(x_train), columns=['factor1','factor2','factor3'])
+AE_2['target'] = y_train
+# Generate plot showing reduced dimensions
+plt.title('First two dimensions of encoded data, colored by single day returns')
+plt.scatter(AE_2['factor1'], AE_2['factor2'], c=AE_2['target'], s=1, alpha=0.3)
+plt.show()
+
+# Reshaping the array from 3D array to 2D array
+np.savez_compressed(r'..\Data\x_train.npz', x_train_matrix_drop.reshape(x_train_matrix_drop.shape[0], -1))
+# Load data
+x_train_loaded = np.load(r'..\Data\x_train.npz')
+print(x_train_loaded.files)
+x_train_loaded = x_train_loaded['arr_0']
+# Reshape to 3D array
+x_train_loaded = x_train_loaded.reshape(x_train_loaded.shape[0], x_train_loaded.shape[1] // 204, 204)
