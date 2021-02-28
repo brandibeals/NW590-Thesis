@@ -13,13 +13,16 @@ import os
 from datetime import datetime
 import numpy as np
 from tensorflow import random
-from tensorflow.keras.models import Sequential,Model
-from tensorflow.keras.layers import Input,Dense,Flatten,Reshape,LSTM,Dropout,RepeatVector,TimeDistributed
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense,Flatten,Reshape,LSTM,RepeatVector,TimeDistributed
 import matplotlib.pyplot as plt
 
 ######################################
 # DEFIINITIONS
 ######################################
+
+## Define settings for plots
+plt.rcParams["font.family"] = "serif"
 
 ## Set working directory
 #path = r'C:\Users\bbeals\Dropbox (Personal)\Masters in Predictive Analytics\590-Thesis\NW590-Thesis'

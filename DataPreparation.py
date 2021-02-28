@@ -34,7 +34,8 @@ today = datetime.now().strftime('%Y%m%d')
 
 ## Set seed for reproducibility
 np.random.seed(1)
-random.set_seed(1)
+#random.set_seed(1)
+random.set_random_seed(1)
 
 ######################################
 # PREPARE DATA
