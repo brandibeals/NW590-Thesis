@@ -1,2 +1,18 @@
 # NW590-Thesis
 Independent Research for Northwestern University MSDS Course 590
+
+Abstract
+
+This research utilized a stacked autoencoder (SAE) along with a long short-term memory (LSTM) neural network to predict risk-adjusted stock market returns. The investment strategy of a specific investment team was injected into the process as a means to guide data collection and modeling decisions, but also to demonstrate a real-world use case. Data was collected from a variety of obtainable sources and prepared using several common tools. There was a particular interest both in the value of ESG indicators and the behavior of different sectors. With 158 ESG indicators available and 80% of the ESG observations being attributed to 27% of the indicators, patterns from the sparse ESG data were difficult to discern. Less so was the impact of sectors on the results. The SAE picked up clear distinctions between different sectors in addition to broad market indicators. Results from the SAE were fed to the LSTM that attempted to predict returns, which were calculated using the Sharpe ratio over the course of a 30-day holding period. The final model performs better on some sectors than others and in certain time periods. This indicates that results from the SAE are critical to the performance of the LSTM, sectors unquestionably behave independently, and there may be an unexplored relationship with seasonality.
+
+Appendix B: Code Repository
+
+The code used to create this analysis can be found in the author’s GitHub repository. There were 3 main phases in the development of this research and files were named accordingly. Data acquisition focused on retrieving the data from its many sources. SQL was used to query data from a firm’s database and demonstrates a familiarity with databases. Market indicators and stock prices were retrieved using Python using the pandas_datareader and yfinance packages, respectively. Once the data had been retrieved, the data preparation phase used Alteryx to bring together data sets of different levels of granularity and perform some feature engineering. For example, the exponential moving average was calculated using Alteryx. Additional data preparation was conducted using Python, specifically data reshaping and scaling. The final phase of this research, and related code base, focused on data modeling, which is broken into separate SAE and LSTM Python scripts.
+
+Appendix C: Stacked Autoencoder Results Dashboard
+
+Analysis of the results from the trained SAE can be found on the author’s Tableau Public profile. This dashboard provides an easy-to-use interface when exploring the results of the encoder. A user can select two features to compare and view the average value by sector, average value over time by sector, and a scatterplot of all observations colored by sector. This presentation format provides additional insight into the results and helps an end user better understand the model, instead of a black box approach to machine learning. Explainable AI is a trending topic and Tableau provides the necessary transparency many decision makers are looking for.
+
+Appendix D: Long Short-Term Memory Results Dashboard
+
+Analysis of the results from the trained LSTM can be found on the author’s Tableau Public profile. This dashboard provides an easy-to-use interface when exploring the results of the predictive model. A user can see the predicted value and actual value for every individual observation, as well as the corresponding sector information. The mean square error for each sector is shown, both overall and over time. A user can filter to a single sector to explore the model’s performance and choose to include or exclude the 20 tickers with the worst error.
